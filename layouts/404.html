@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="content page-template 404" role="main">
+    <article class="post page">
+        <header class="post-header">
+            <a id="blog-logo" href="{{ "/" | relURL }}">
+                {{ .Site.Title }}
+            </a>
+        </header>
+        <h1 class="post-title">404 - Page Not Found</h1>
+        <section class="post-content">
+            Give it another try: <a href="{{ "/" | relURL }}" alt="Homepage">Back to the homepage</a>.
+        </section>
+    </article>
+</main>
+{{ end }}

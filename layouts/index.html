@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $sections := $headless.Resources.ByType "page" }}
+<header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . | absURL }})"{{ end }}>
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+
+            
+            {{ with .Params.header_headline }}<h1 class="blog-title">{{ . }}</h1>{{ end }}
+            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
+
+            {{ range where $sections ".Params.header_menu" "eq" true }}
+                 <a class='btn site-menu' data-title='{{ .Title }}'>{{ .Title }}</a>
+            {{ end }}
+            <i id='header-arrow' class="fa fa-angle-down"></i>
+        </div>
+    </div>
+
+</header>
+<main class="content" role="main">
+
+    <div class='fixed-nav'>
+    </div>
+    {{ range $index_val, $elem_val := $sections }}
+        <div class='post-holder'>
+            <article class='post {{ if eq $index_val 0 }}first{{ else }}{{ if eq (add $index_val 1) (len $sections) }}last{{ end }}{{ end }}'>
+                <header class="post-header">
+                    <h2 class="post-title">{{ .Title }}</h2>
+                </header>
+                <section class="post-content">
+                    <p>{{ .Content }}</p>
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    {{ end }}
+</main>
+{{ end }}

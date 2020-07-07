@@ -1,0 +1,39 @@
+baseURL = "https://example.com"
+
+# This is a "one page"-website, so we do not need these kinds of pages...
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "en"
+
+theme = "hugo-scroll"
+themesDir = "../.."
+
+# The "title" of your website
+title = "Jane Doe - Nutrition Coach & Chef Consultant"
+
+[params]
+    # A "copyright"-line to be added at the bottom of the page.
+    copyright = "© Jane Doe"
+
+    # The "description" of your website. This is used in the meta data of your generated html.
+    description = "Nutrition Coach & Chef Consultant"
+
+    # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+    favicon = "/images/favicon.png"
+
+    # These "images" are used for the structured data templates. This will show up, when
+    # services like Twitter or Slack want to generate a preview of a link to your site.
+    # See https://gohugo.io/templates/internal#twitter-cards and
+    # https://gohugo.io/templates/internal#open-graph.
+    images = ["/images/cover-image.jpg"]
+    
+    # Another "title" :-). This one is used as the site_name on the Hugo's internal 
+    # opengraph structured data template. 
+    # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
+    title = "Jane Doe - Nutrition Coach & Chef Consultant"
+    
+    # This theme will, by default, inject a design-by-line at the bottom of the page.
+    # You can turn it off, but we would really appreciate if you don’t :-)
+    # hidedesignbyline = true
+    [params.meta]
+        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"

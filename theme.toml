@@ -1,0 +1,34 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Hugo Scroll"
+license = "MIT"
+licenselink = "https://github.com/janraasch/hugo-scroll/blob/master/LICENSE"
+description = "A Hugo theme for pretty, quick and simple single-page websites."
+homepage = "https://github.com/janraasch/hugo-scroll"
+tags = [
+  "clean",
+  "contact",
+  "fontawesome",
+  "landing page",
+  "onepage",
+  "one page",
+  "personal",
+  "projects",
+  "simple",
+  "single page",
+  "starter",
+  "responsive",
+  "theme"
+]
+features = ["cover-image", "favicon", "header-menu", "auto-scroll"]
+min_version = "0.41.0"
+
+[author]
+  name = "Jan Raasch"
+  homepage = "https://www.janraasch.com"
+
+[original]
+  name = "GhostScroll"
+  homepage = "https://github.com/grmmph/GhostScroll"
+  repo = "https://github.com/grmmph/GhostScroll"
