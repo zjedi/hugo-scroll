@@ -24,7 +24,7 @@ hugo server --source=exampleSite
 
 ## Adjust configuration / config.toml
 
-Please check out the [config.toml](https://raw.githubusercontent.com/janraasch/hugo-scroll/master/exampleSite/config.toml) included on the [exampleSite](https://github.com/janraasch/hugo-scroll/master/exampleSite) of this theme.
+Please check out the [config.toml](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/config.toml) included on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite) of this theme.
 
 ## Adding content
 
