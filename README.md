@@ -1,6 +1,6 @@
 # Hugo Scroll
 
-📜 A [Hugo](https://gohugo.io/) theme for pretty, quick and simple single-page websites.
+📜 A [Hugo](https://gohugo.io/)-theme for pretty, quick and simple single-page websites.
 
 ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/janraasch/hugo-scroll/master/images/tn.png)
 
