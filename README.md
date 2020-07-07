@@ -40,6 +40,11 @@ To create **a page separate from the homepage**, run
 hugo new my-new-page.md
 ```
 
+## Issues / Feedback / Contributing
+Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and [Pull Requests](https://github.com/janraasch/hugo-scroll/pulls).
+
+If you do not have a GitHub-account, feel free to hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
+
 
 ## Sponsor [![Pay me][insert-coins-svg]][paypal-dot-me]
 Please consider supporting my work on this theme via [PayPal][paypal-dot-me].
