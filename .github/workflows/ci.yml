@@ -25,7 +25,7 @@ jobs:
       run: hugo --minify --gc --source ./exampleSite --baseURL https://janraasch.github.io/hugo-scroll/
   
     - name: Deploy to GitHub Pages
-      if: github.event_name == 'push' && github.ref == 'master'
+      if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
