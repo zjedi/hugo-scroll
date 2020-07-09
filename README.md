@@ -4,6 +4,10 @@
 
 ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/janraasch/hugo-scroll/master/images/tn.png)
 
+## Demo
+
+For a current & working demo of this theme please check out https://janraasch.github.io/hugo-scroll/ 🎯.
+
 ## Quick Start
 
 If you already have a hugo site on your machine, you can simply add this theme via
