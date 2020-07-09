@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: latest
+    
+    - name: Build local ./exampleSite
+      run: hugo --minify --gc --source ./exampleSite --baseURL https://janraasch.github.io/hugo-scroll/
+  
+    - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.event.ref == 'master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
