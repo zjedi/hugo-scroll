@@ -2,7 +2,7 @@
 <main class="content page-template page-{{ .Slug }}" role="main">
     <article class="post page">
         <header class="post-header">
-            <a id="blog-logo" href="{{ "/" | absURL }}">
+            <a id="blog-logo" href="{{ "/" | relURL }}">
                 {{ .Site.Title }}
             </a>
         </header>
