@@ -1,4 +1,4 @@
-# Hugo Scroll
+# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
 
 📜 A [Hugo](https://gohugo.io/)-theme for pretty, quick and simple single-page websites.
 
