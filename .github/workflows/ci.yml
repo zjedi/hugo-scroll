@@ -22,7 +22,7 @@ jobs:
         hugo-version: latest
 
     - name: Build local ./exampleSite
-      run: hugo --minify --gc --destination ../public --source ./exampleSite --baseURL https://janraasch.github.io/hugo-scroll/
+      run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://janraasch.github.io/hugo-scroll/
 
     - name: Deploy to GitHub Pages
       if: github.event_name == 'push'

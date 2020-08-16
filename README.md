@@ -23,7 +23,7 @@ If you simply want to check out the `exampleSite`, you can run
 ```
 git clone https://github.com/janraasch/hugo-scroll.git hugo-scroll
 cd hugo-scroll
-hugo server --source=exampleSite
+hugo server --source=exampleSite --themesDir=../..
 ```
 
 ## Adjust configuration / config.toml
