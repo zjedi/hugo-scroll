@@ -8,7 +8,7 @@
 
 For a current & working demo of this theme please check out https://janraasch.github.io/hugo-scroll/ 🎯.
 
-## Quick Start
+## Installation
 
 If you already have a hugo site on your machine, you can simply add this theme via
 
@@ -26,11 +26,19 @@ cd hugo-scroll
 hugo server --source=exampleSite --themesDir=../..
 ```
 
+For more information read the official [setup guide][hugo-setup-guide] of Hugo.
+
 ## Adjust configuration / config.toml
 
 Please check out the [config.toml](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/config.toml) included on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite) of this theme.
 
-## Adding content
+## Content & structure
+
+### Starting fresh
+
+If you are starting fresh, simply copy over the contents of the `exmapleSite`-directory included in this theme to your source directory. That should give you a good idea about how things works, and then you can go on from there.
+
+### Adding content
 
 You can add **a new section to the homepage** via running
 
@@ -63,3 +71,5 @@ Please consider supporting my work on this theme via [PayPal][paypal-dot-me].
 
 [paypal-dot-me]: https://www.paypal.me/janraasch/29,00
 [insert-coins-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg
+
+[hugo-setup-guide]: https://gohugo.io/getting-started/installing
