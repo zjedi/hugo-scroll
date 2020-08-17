@@ -36,7 +36,7 @@ Please check out the [config.toml](https://github.com/janraasch/hugo-scroll/blob
 
 ### Starting fresh
 
-If you are starting fresh, simply copy over the contents of the `exmapleSite`-directory included in this theme to your source directory. That should give you a good idea about how things works, and then you can go on from there.
+If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
 
 ### Adding content
 
