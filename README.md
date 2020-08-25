@@ -52,6 +52,10 @@ To create **a page separate from the homepage**, run
 hugo new my-new-page.md
 ```
 
+### Adding your branding / colors / css
+
+Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag *or* you may add a `<link>`-tag referencing your own `override.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file to get started and to find more detailed instructions.
+
 ## Issues / Feedback / Contributing
 Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and [Pull Requests](https://github.com/janraasch/hugo-scroll/pulls).
 
