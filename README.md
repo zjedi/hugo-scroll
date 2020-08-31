@@ -65,6 +65,8 @@ If you do not have a GitHub-account, feel free to hit me up via e-mail (see [jan
 ## Sponsor [![Pay me][insert-coins-svg]][paypal-dot-me]
 Please consider supporting my work on this theme via [GitHub Sponsors][github-sponsors] or [PayPal][paypal-dot-me].
 
+[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
+
 ## Special Thanks 🎁
 
 * Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
