@@ -63,7 +63,7 @@ If you do not have a GitHub-account, feel free to hit me up via e-mail (see [jan
 
 
 ## Sponsor [![Pay me][insert-coins-svg]][paypal-dot-me]
-Please consider supporting my work on this theme via [PayPal][paypal-dot-me].
+Please consider supporting my work on this theme via [GitHub Sponsors][github-sponsors] or [PayPal][paypal-dot-me].
 
 ## Special Thanks 🎁
 
@@ -74,6 +74,7 @@ Please consider supporting my work on this theme via [PayPal][paypal-dot-me].
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
 
 [paypal-dot-me]: https://www.paypal.me/janraasch/29,00
+[github-sponsors]: https://github.com/sponsors/janraasch
 [insert-coins-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg
 
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
