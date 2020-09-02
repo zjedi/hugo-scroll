@@ -19,7 +19,7 @@ var $sitehead = $('#site-head');
 		}, 1000);
 	}
 	function srcToAnchorWithTitle (str) {
-		var $el = $('#' + str);
+		var $el = $('#' + str.replace("'","\\\'"));
 		if ($el.length) {
 			srcTo($el);
 		}
