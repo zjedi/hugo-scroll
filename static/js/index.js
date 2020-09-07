@@ -41,7 +41,7 @@ var $sitehead = $('#site-head');
 		});
 
 		$('a.btn.site-menu').click(function (e) {
-			srcToAnchorWithTitle($(e.target).data('title').toLowerCase().split(' ').join('-'));
+			srcToAnchorWithTitle($(e.target).data('title-anchor'));
 		});
 		$('#header-arrow').click(function () {
 			srcTo($first);
@@ -51,7 +51,6 @@ var $sitehead = $('#site-head');
 			var t = $(this).text();
 			var index = $(this).parents('.post-holder').index();
 			$fnav.append("<a class='fn-item' item_index='"+index+"'>"+t+"</a>")
-			$(this).parents('article').attr('id',t.toLowerCase().split(' ').join('-'));
 			$('.fn-item').click(function () {
 				var i = $(this).attr('item_index');
 				var s = $(".post[item_index='"+i+"']");
