@@ -1,4 +1,4 @@
-# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
+# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push) [![Pay me][paypal-svg]][paypal-dot-me] [![Sponsor me][github-sponsors-svg]][github-sponsors]
 
 📜 A [Hugo](https://gohugo.io/)-theme for pretty, quick and simple single-page websites.
 
@@ -7,6 +7,12 @@
 ## Demo
 
 For a current & working demo of this theme please check out https://janraasch.github.io/hugo-scroll/ 🎯.
+
+## Sponsor 💟
+
+Support my work on this theme via [GitHub Sponsors][github-sponsors] (recurring) or [PayPal][paypal-dot-me] (one-time).
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
 
 ## Installation
 
@@ -62,12 +68,6 @@ Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and 
 
 If you do not have a GitHub-account, feel free to hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
 
-## Sponsor [![Pay me][insert-coins-svg]][paypal-dot-me]
-
-Please consider supporting my work on this theme via [GitHub Sponsors][github-sponsors] or [PayPal][paypal-dot-me].
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
-
 ## Special Thanks 🎁
 
 - Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
@@ -79,5 +79,6 @@ Please consider supporting my work on this theme via [GitHub Sponsors][github-sp
 
 [paypal-dot-me]: https://www.paypal.me/janraasch/29,00
 [github-sponsors]: https://github.com/sponsors/janraasch
-[insert-coins-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg
+[paypal-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg?logo=paypal
+[github-sponsors-svg]: https://img.shields.io/badge/sponsor-me-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
