@@ -54,29 +54,30 @@ hugo new my-new-page.md
 
 ### Adding your branding / colors / css
 
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag *or* you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
+Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
 ## Issues / Feedback / Contributing
+
 Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and [Pull Requests](https://github.com/janraasch/hugo-scroll/pulls).
 
 If you do not have a GitHub-account, feel free to hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
 
-
 ## Sponsor [![Pay me][insert-coins-svg]][paypal-dot-me]
+
 Please consider supporting my work on this theme via [GitHub Sponsors][github-sponsors] or [PayPal][paypal-dot-me].
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
 
 ## Special Thanks 🎁
 
-* Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
-* Go to [Pexels](https://www.pexels.com), for supplying those wonderful *free* stock photos on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite).
+- Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
+- Go to [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite).
 
 ## License
+
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
 
 [paypal-dot-me]: https://www.paypal.me/janraasch/29,00
 [github-sponsors]: https://github.com/sponsors/janraasch
 [insert-coins-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg
-
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing

@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "hugo-scroll",
+  "version": "1.0.0",
+  "description": "A Hugo theme for pretty, quick and simple single-page websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "prettier --check . ",
+    "format": "prettier --write . "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janraasch/hugo-scroll.git"
+  },
+  "author": {
+    "name": "Jan Raasch",
+    "email": "jan@janraasch.com",
+    "url": "https://www.janraasch.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janraasch/hugo-scroll/issues"
+  },
+  "homepage": "https://github.com/janraasch/hugo-scroll#readme",
+  "devDependencies": {
+    "prettier": "^2.1.1",
+    "prettier-plugin-go-template": "0.0.10"
+  }
+}

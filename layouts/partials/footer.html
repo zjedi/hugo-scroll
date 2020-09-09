@@ -1,11 +1,18 @@
 <footer class="site-footer">
-    <div class="inner">
-        {{ with .Site.Params.copyright }}<section class="copyright">{{ . | markdownify }}</section>{{ end }}
-        <section>{{ echoParam .Site.Params "hidebyline" }}</section>
-        {{ if ne .Site.Params.hidedesignbyline true }}<section>
-            <!-- TODO: Change link to https://themes.gohugo.io/hugo-scroll/ once
+  <div class="inner">
+    {{ with .Site.Params.copyright }}
+      <section class="copyright">{{ . | markdownify }}</section>{{ end }}
+
+
+    <section>{{ echoParam .Site.Params "hidebyline" }}</section>
+    {{ if ne .Site.Params.hidedesignbyline true }}
+      <section>
+        <!-- TODO: Change link to https://themes.gohugo.io/hugo-scroll/ once
             https://github.com/gohugoio/hugoThemes/issues/881 is solved. -->
-            <a href="https://github.com/janraasch/hugo-scroll/">Design</a> template built with ♥️ by <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>
-        </section>{{ end }}
-    </div>
+        <a href="https://github.com/janraasch/hugo-scroll/">Design</a> template
+        built with ♥️ by
+        <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>
+      </section>{{ end }}
+
+  </div>
 </footer>

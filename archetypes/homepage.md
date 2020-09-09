@@ -8,4 +8,5 @@ weight: 5
 # into the header menu at the top of the homepage.
 header_menu: true
 ---
+
 This is just another section to appear on the homepage.

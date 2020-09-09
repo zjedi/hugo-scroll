@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "footer.html" . -}}
 
-        <!-- We do need jQuery to be loaded before HugoScroll script -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- We do need jQuery to be loaded before HugoScroll script -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.3.min.js"
+    ></script>
 
-        <!-- The main JavaScript files for HugoScroll -->
-        <script type="text/javascript" src='{{ "js/icons.js" | absURL }}'></script>
-        <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
-        <!-- A partial to be overwritten by the user.
+    <!-- The main JavaScript files for HugoScroll -->
+    <script type="text/javascript" src='{{ "js/icons.js" | absURL }}'></script>
+    <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
+    <!-- A partial to be overwritten by the user.
              Simply place a custom_body.html into
              your local /layouts/partials-directory -->
-        {{- partial "custom_body.html" . -}}
-    </body>
+    {{- partial "custom_body.html" . -}}
+  </body>
 </html>
