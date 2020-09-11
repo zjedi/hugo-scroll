@@ -79,6 +79,6 @@ If you do not have a GitHub-account, feel free to hit me up via e-mail (see [jan
 
 [paypal-dot-me]: https://www.paypal.me/janraasch/29,00
 [github-sponsors]: https://github.com/sponsors/janraasch
-[paypal-svg]: https://img.shields.io/badge/insert-coins-11dde2.svg?logo=paypal
-[github-sponsors-svg]: https://img.shields.io/badge/sponsor-me-ee4aaa.svg?logo=github
+[paypal-svg]: https://img.shields.io/badge/onetime-donation-11dde2.svg?logo=paypal
+[github-sponsors-svg]: https://img.shields.io/badge/recurring-sponsorship-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
