@@ -58,6 +58,16 @@ To create **a page separate from the homepage**, run
 hugo new my-new-page.md
 ```
 
+### Using icons
+
+This theme includes the full set of [Font Awesome v4 Icons][font-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
+
+```markdown
+Look at this nice »envelope«-icon: {{<icon class="fa fa-envelope">}}. I took this from https://fontawesome.com/v4.7.0/icon/envelope :-)
+```
+
+For the full list of icons, see [Font Awesome v4 Icons][font-awesome-icons].
+
 ### Adding your branding / colors / css
 
 Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
@@ -82,3 +92,6 @@ If you do not have a GitHub-account, feel free to hit me up via e-mail (see [jan
 [paypal-svg]: https://img.shields.io/badge/onetime-donation-11dde2.svg?logo=paypal
 [github-sponsors-svg]: https://img.shields.io/badge/recurring-sponsorship-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
+[font-awesome]: https://fontawesome.com/v4.7.0
+[font-awesome-icons]: https://fontawesome.com/v4.7.0/icons/
+[hugo-shortcodes]: https://gohugo.io/content-management/shortcodes/
