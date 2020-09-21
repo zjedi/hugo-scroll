@@ -104,10 +104,10 @@ var $sitehead = $("#site-head");
     }
 
     $("ul li").before(
-      '<span class="bult fa fa-asterisk icon-asterisk"></span>'
+      '<span class="bult fa fa-asterisk"></span>'
     );
-    $("blockquote p").prepend('<span class="quo icon-quote-left"></span>');
-    $("blockquote p").append('<span class="quo icon-quote-right"></span>');
+    $("blockquote p").prepend('<span class="quo fa fa-quote-left"></span>');
+    $("blockquote p").append('<span class="quo fa fa-quote-right"></span>');
   });
 
   $post.each(function () {
