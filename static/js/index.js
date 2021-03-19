@@ -74,7 +74,7 @@ var $sitehead = $("#site-head");
         var g = $sitehead.offset().top;
         var h = $sitehead.offset().top + $sitehead.height() - 100;
 
-        if (w >= g && w <= h) {
+        if (w >= Math.floor(g) && w <= Math.ceil(h)) {
           $(".fixed-nav").fadeOut("fast");
         } else if ($(window).width() > 500) {
           $(".fixed-nav").fadeIn("fast");
