@@ -1,6 +1,6 @@
 build
 resources
 public
-static/font-awesome
+static/fork-awesome
 static/css/normalize.css
 layouts/index.html
