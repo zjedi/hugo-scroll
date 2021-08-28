@@ -6,6 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/janraasch/hugo-scroll/blob/master/LICENSE"
 description = "A Hugo theme for pretty, quick and simple single-page websites."
 homepage = "https://github.com/janraasch/hugo-scroll"
+demosite = "https://janraasch.github.io/hugo-scroll/"
 tags = [
   "clean",
   "contact",
