@@ -1,6 +1,13 @@
 {{ define "main" }}
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "sections" $sections }}
+{{ if not .Site.BuildDrafts }}
+    {{ $sections := where $sections "Draft" "!=" true}}
+    {{ $scratch.Set "sections" $sections }}
+{{ end}}
+{{ $sections := $scratch.Get "sections" }}
 <header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
     <div class="vertical">
         <div id="site-head-content" class="inner">
