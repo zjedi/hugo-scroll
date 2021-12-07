@@ -21,7 +21,7 @@
     </div>
     {{ range $index_val, $elem_val := $sections }}
         <div class='post-holder'>
-            <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ else }}{{ if eq (add $index_val 1) (len $sections) }}last{{ end }}{{ end }}'>
+            <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
                 <header class="post-header">
                     <h2 class="post-title">{{ .Title }}</h2>
                 </header>
