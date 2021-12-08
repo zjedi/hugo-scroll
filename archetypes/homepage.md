@@ -2,7 +2,7 @@
 title: '{{ replace .Name "-" " " | title }}'
 
 # The "name" value will be used as text for buttons and fixed menu items.
-# The "title" will be used if "name" is not provided.
+# The "title" value will be used if value for "name" is not provided.
 #name: 'Short Title'
 
 # The "weight" will determine where this section appears on the "homepage".
