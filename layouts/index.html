@@ -10,7 +10,11 @@
             {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
 
             {{ range where $sections ".Params.header_menu" "eq" true }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
+                {{ $button_title := .Title }}
+                {{ with .Params.Name }}
+                    {{ $button_title = . }}
+                {{ end }}
+                 <a class='btn site-menu' data-title-anchor='{{ anchorize $button_title }}'>{{ $button_title }}</a>
             {{ end }}
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>
@@ -21,10 +25,14 @@
     <div class='fixed-nav'>
     </div>
     {{ range $index_val, $elem_val := $sections }}
+        {{ $fnav_title := .Title }}
+        {{ with .Params.Name }}
+            {{ $fnav_title = . }}
+        {{ end }}
         <div class='post-holder'>
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
                 <header class="post-header">
-                    <h2 class="post-title">{{ .Title }}</h2>
+                    <h2 class="post-title" data-fnav-title="{{ safeHTMLAttr $fnav_title }}">{{ .Title }}</h2>
                 </header>
                 <section class="post-content">
                     {{ .Content }}

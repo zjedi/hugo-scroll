@@ -49,7 +49,7 @@ var $sitehead = $("#site-head");
     });
 
     $(".post-title").each(function () {
-      var t = $(this).text();
+      var t = $(this).data("fnav-title");
       var index = $(this).parents(".post-holder").index();
       $fnav.append(
         "<a class='fn-item' item_index='" + index + "'>" + t + "</a>"
