@@ -14,7 +14,7 @@
                 {{ with .Params.Name }}
                     {{ $button_title = . }}
                 {{ end }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize $button_title }}'>{{ $button_title }}</a>
+                 <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ $button_title }}</a>
             {{ end }}
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>
