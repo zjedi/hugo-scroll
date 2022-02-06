@@ -11,7 +11,7 @@
 
             {{ range where $sections ".Params.header_menu" "eq" true }}
                 {{ $button_title := .Title }}
-                {{ with .Params.Name }}
+                {{ with .Params.header_menu_title }}
                     {{ $button_title = . }}
                 {{ end }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ $button_title }}</a>
@@ -26,7 +26,7 @@
     </div>
     {{ range $index_val, $elem_val := $sections }}
         {{ $fnav_title := .Title }}
-        {{ with .Params.Name }}
+        {{ with .Params.navigation_menu_title }}
             {{ $fnav_title = . }}
         {{ end }}
         <div class='post-holder'>

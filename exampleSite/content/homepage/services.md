@@ -1,6 +1,7 @@
 ---
 title: "The Services I Offer"
-name: "My Services"
+header_menu_title: "My Services"
+navigation_menu_title: "Services"
 weight: 2
 header_menu: true
 ---
