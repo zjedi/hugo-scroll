@@ -24,6 +24,6 @@
   "homepage": "https://github.com/janraasch/hugo-scroll#readme",
   "devDependencies": {
     "prettier": "^2.7.1",
-    "prettier-plugin-go-template": "0.0.11"
+    "prettier-plugin-go-template": "0.0.13"
   }
 }
