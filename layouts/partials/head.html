@@ -19,8 +19,13 @@
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="{{ "css/screen.css" | absURL }}" />
-<link rel="stylesheet" href="{{ "css/fonts.css" | absURL }}" type="text/css" />
+{{ $stylesheetNormalize := resources.Get "css/normalize.css" }}
+{{ $stylesheetFonts := resources.Get "css/fonts.css" }}
+{{ $stylesheetScreen := resources.Get "css/screen.css" }}
+{{ $stylesheet := slice $stylesheetNormalize $stylesheetFonts $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
+
+<link rel="stylesheet" href="{{ $stylesheet.Permalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
+
 <link
   rel="stylesheet"
   href="{{ "fork-awesome/css/fork-awesome.min.css" | absURL }}"
