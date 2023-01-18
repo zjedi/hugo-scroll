@@ -32,10 +32,10 @@
               {{ with .Params.header_menu_title }}{{ $button_title = . }}{{ end }}
 
               {{ if isset .Params "external" }}
-                 <a class='btn site-menu' href='{{ .Params.external  }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
+                 <a class='btn site-menu' href='{{ .Params.external }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
               {{ else }}
                 {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
+                 <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
               {{ end }}
             {{ end }}
             <i id='header-arrow' class="fa fa-angle-down"></i>
@@ -44,18 +44,23 @@
 </header>
 
 <main class="content" role="main">
+    {{ $content := where $sections "Params.external" "==" nil }}
 
     <!-- Render sticky left navigation menu -->
-    <div class='fixed-nav'></div>
+    <div class='fixed-nav'>
+        {{ range $index_val, $elem_val := $content }}
+            {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
+            <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize $fnav_title }}'>{{ $fnav_title | safeHTML }}</a>
+        {{ end }}
+    </div>
 
     <!-- Render single-page content -->
-    {{ $content := where $sections "Params.external" "==" nil }}
     {{ range $index_val, $elem_val := $content }}
         {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
         <div class='post-holder{{ if and (ne .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq .Site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
             <article id='{{ anchorize $fnav_title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $content) }}last{{ end }}'>
                 <header class="post-header">
-                    <h2 class="post-title" data-fnav-title="{{ $fnav_title | safeHTMLAttr }}">{{ .Title | safeHTML }}</h2>
+                    <h2 class="post-title">{{ .Title | safeHTML }}</h2>
                 </header>
                 <section class="post-content">
                     {{ .Content }}
