@@ -10,7 +10,7 @@
             {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
 
             {{ range where $sections ".Params.header_menu" "eq" true }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
+                 <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}' href='#{{ anchorize .Title }}'>{{ .Title }}</a>
             {{ end }}
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>
@@ -19,6 +19,9 @@
 <main class="content" role="main">
 
     <div class='fixed-nav'>
+        {{ range $index_val, $elem_val := $sections }}
+            <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize .Title }}'>{{ .Title }}</a>
+        {{ end }}
     </div>
     {{ range $index_val, $elem_val := $sections }}
         <div class='post-holder'>

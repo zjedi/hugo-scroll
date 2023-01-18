@@ -520,7 +520,7 @@ ul li {
   background: #f2efe8;
   position: relative;
 }
-.post-holder.odd {
+.post-holder:nth-child(odd) {
   background: #b80135;
   color: white;
 }
@@ -558,6 +558,7 @@ a.fn-item {
   display: block;
   cursor: pointer;
   opacity: 0.7;
+  text-decoration: none;
 }
 .white {
   color: white;

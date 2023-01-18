@@ -48,25 +48,6 @@ var $sitehead = $("#site-head");
       srcTo($first);
     });
 
-    $(".post-title").each(function () {
-      var t = $(this).text();
-      var index = $(this).parents(".post-holder").index();
-      $fnav.append(
-        "<a class='fn-item' item_index='" + index + "'>" + t + "</a>"
-      );
-      $(".fn-item").click(function () {
-        var i = $(this).attr("item_index");
-        var s = $(".post[item_index='" + i + "']");
-
-        $("html, body").animate(
-          {
-            scrollTop: s.offset().top,
-          },
-          400
-        );
-      });
-    });
-
     $(".post.last").next(".post-after").hide();
     if ($sitehead.length) {
       $(window).scroll(function () {
