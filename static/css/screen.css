@@ -5,16 +5,15 @@
 /*
 
     0.  Includes
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Third Party Elements
-    7.  Pagination
-    8.  Footer
-    9.  Media Queries (Tablet)
-    10. Media Queries (Mobile)
+    1.  General
+    2.  Utilities
+    3.  General
+    4.  Single Post
+    5.  Third Party Elements
+    6.  Pagination
+    7.  Footer
+    8.  Media Queries (Tablet)
+    9. Media Queries (Mobile)
 
  */
 
@@ -25,60 +24,8 @@
 @import url(normalize.css);
 
 /* ==========================================================================
-      1. Icons - Sets up the icon font and respective classes
-      ========================================================================== */
-
-/* Import the font file with the icons in it */
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icons.eot");
-  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/icons.woff") format("woff"),
-    url("../fonts/icons.ttf") format("truetype"),
-    url("../fonts/icons.svg#icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Apply these base styles to all icons */
-.i-ghost,
-.icon-feed,
-.icon-twitter,
-.icon-google-plus,
-.icon-facebook {
-  font-family: "icons";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none;
-}
-
-/* Each icon is created by inserting the corret character into the
-      content of the :before pseudo element. Like a boss. */
-.i-ghost:before {
-  content: "\e000";
-}
-.icon-feed:before {
-  content: "\e001";
-}
-.icon-twitter:before {
-  content: "\e002";
-  font-size: 1.1em;
-}
-.icon-google-plus:before {
-  content: "\e003";
-}
-.icon-facebook:before {
-  content: "\e004";
-}
-
-/* ==========================================================================
-      2. General - Setting up some base styles
-      ========================================================================== */
+   1. General - Setting up some base styles
+   ========================================================================== */
 
 html {
   height: 100%;
@@ -436,8 +383,8 @@ ul li {
 }
 
 /* ==========================================================================
-      3. Utilities - These things get used a lot
-      ========================================================================== */
+   2. Utilities - These things get used a lot
+   ========================================================================== */
 
 /* Hides shit */
 .hidden {
@@ -461,8 +408,8 @@ ul li {
 }
 
 /* ==========================================================================
-      4. General - The main styles for the the theme
-      ========================================================================== */
+   3. General - The main styles for the the theme
+   ========================================================================== */
 
 /* Big cover image on the home page */
 #site-head {
@@ -661,8 +608,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      5. Single Post - When you click on an individual post
-      ========================================================================== */
+   4. Single Post - When you click on an individual post
+   ========================================================================== */
 
 /* Tweak the .post wrapper style */
 .post-template .post {
@@ -735,8 +682,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      6. Third Party Elements - Embeds from other services
-      ========================================================================== */
+   5. Third Party Elements - Embeds from other services
+   ========================================================================== */
 
 /* Github */
 
@@ -751,8 +698,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      7. Pagination - Tools to let you flick between pages
-      ========================================================================== */
+   6. Pagination - Tools to let you flick between pages
+   ========================================================================== */
 
 /* The main wrapper for our pagination links */
 .pagination {
@@ -801,8 +748,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      8. Footer - The bottom of every page
-      ========================================================================== */
+   7. Footer - The bottom of every page
+   ========================================================================== */
 
 .site-footer {
   position: relative;
@@ -917,8 +864,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      9. Media Queries - Smaller than 1130px
-      ========================================================================== */
+   8. Media Queries - Smaller than 1130px
+   ========================================================================== */
 
 @media only screen and (max-width: 1130px) {
   .fixed-nav {
@@ -994,8 +941,8 @@ a.fn-item.active {
 }
 
 /* ==========================================================================
-      10. Media Queries - Smaller than 500px
-      ========================================================================== */
+   9. Media Queries - Smaller than 500px
+   ========================================================================== */
 
 @media only screen and (max-width: 500px) {
   .fixed-nav {
