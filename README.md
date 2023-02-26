@@ -1,4 +1,4 @@
-# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push) [![Pay me][paypal-svg]][paypal-dot-me] [![Sponsor me][github-sponsors-svg]][github-sponsors]
+# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
 
 📜 A [Hugo](https://gohugo.io/)-theme for pretty, quick and simple single-page websites.
 
@@ -7,12 +7,6 @@
 ## Demo
 
 For a current & working demo of this theme please check out https://janraasch.github.io/hugo-scroll/ 🎯.
-
-## Sponsor 💟
-
-Support my work on this theme via [GitHub Sponsors][github-sponsors] (recurring) or [PayPal][paypal-dot-me] (one-time).
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
 
 ## Installation
 
@@ -87,10 +81,6 @@ If you do not have a GitHub-account, feel free to hit me up via e-mail (see [jan
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
 
-[paypal-dot-me]: https://www.paypal.me/janraasch/29,00
-[github-sponsors]: https://github.com/sponsors/janraasch
-[paypal-svg]: https://img.shields.io/badge/onetime-donation-11dde2.svg?logo=paypal
-[github-sponsors-svg]: https://img.shields.io/badge/recurring-sponsorship-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
 [fork-awesome]: https://forkaweso.me/Fork-Awesome/
 [fork-awesome-icons]: https://forkaweso.me/Fork-Awesome/icons/
