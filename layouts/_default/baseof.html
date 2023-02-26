@@ -15,7 +15,7 @@
     {{ $scriptIndex := resources.Get "js/index.js" }}
     {{ $js := slice $scriptJquery $scriptIcons $scriptIndex | resources.Concat "js/script.js" | resources.Minify | resources.Fingerprint }}
 
-    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" ></script>
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" ></script>
 
     <!-- A partial to be overwritten by the user.
              Simply place a custom_body.html into
