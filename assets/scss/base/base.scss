@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+    line-height: 1.6em;
+    color: var(--color-text-main);
+    background-color: var(--color-background-main);
+}
+
+::-moz-selection {
+    color: var(--color-text-darker);
+    background: #d6edff;
+    text-shadow: none;
+}
+
+::selection {
+    color: var(--color-text-darker);
+    background: #d6edff;
+    text-shadow: none;
+}

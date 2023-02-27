@@ -1,0 +1,163 @@
+/**
+ Media queries to add responsiveness
+ */
+
+@media only screen and (max-width: 1130px) {
+    .fixed-nav {
+        opacity: 1;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 99999;
+        background: var(--color-background);
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+
+        a.fn-item {
+            display: inline;
+            margin-left: 10px;
+        }
+    }
+
+    blockquote {
+        margin-left: 0;
+    }
+
+    .post-holder {
+        padding-top: 20px;
+    }
+
+    #site-head {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 240px;
+        padding: 15% 0;
+        height: 100%;
+        margin-bottom: 0rem;
+    }
+
+    .blog-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .blog-description {
+        font-size: 2.2rem;
+        line-height: 1.5em;
+    }
+
+    .post {
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
+
+    .post-template .post {
+        padding-bottom: 1rem;
+    }
+
+    .post-template .post-header {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.8rem;
+    }
+
+    h3 {
+        font-size: 3.3rem;
+    }
+
+    h4 {
+        font-size: 2.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .post-holder {
+        padding-top: 20px;
+    }
+
+    #blog-logo img {
+        max-height: 80px;
+    }
+
+    .inner,
+    .pagination {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .post {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 0.8em;
+        line-height: 1.6em;
+    }
+
+    #site-head {
+        padding: 10% 0;
+        height: 65%;
+    }
+
+    #header-arrow {
+        display: none;
+    }
+
+    a.btn {
+        margin-top: 10px;
+    }
+
+    .blog-title {
+        font-size: 3rem;
+    }
+
+    .blog-description {
+        font-size: 2.2rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 3rem;
+        line-height: 1.1em;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    h4 {
+        font-size: 2.3rem;
+    }
+
+    .post-template .post {
+        padding-bottom: 0;
+    }
+
+    .post-template .post-header {
+        padding: 30px 0;
+    }
+
+    .site-footer {
+        font-size: 1.1rem;
+    }
+}
+
+/*
+    Allow navigation on mobile devices (most devices announce ~ 410-490px width).
+    So only drop navigation if really needed for extemly small devices
+*/
+@media only screen and (max-width: 399px) {
+    .fixed-nav {
+        display: none;
+    }
+}

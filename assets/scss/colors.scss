@@ -1,0 +1,20 @@
+:root {
+    /** Main text color */
+    --color-text-main: #3a4145;
+    --color-text-lighter: #576161;
+    /** Text color on the cover image */
+    --color-text-cover: #fff;
+    /** Text color on odd sections */
+    --color-text-alt: #fff;
+
+    /** Main background color */
+    --color-background-main: #f2efe8;
+    --color-background-darker: #e0ded7;
+    /** Background color on odd sections*/
+    --color-background-alt: #b80135;
+
+    /** Primary color, e.g. for the main buttons */
+    --color-primary: #86c440;
+    /** Color to be used for text on primary elements */
+    --color-primary-text: #000;
+}

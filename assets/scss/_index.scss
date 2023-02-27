@@ -1,0 +1,24 @@
+// Colors
+@import "./colors.scss";
+// Basic UI styling
+@import "./base/_index.scss";
+// Often used utils like floating
+@import "./utilities.scss";
+// Theme specific styling
+@import "./theme.scss";
+
+// Github integration
+.gist {
+    table {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .line-number {
+        min-width: 25px;
+        font-size: 1.1rem;
+    }
+}
+
+// Media queries for responsiveness
+@import "./responsive.scss"

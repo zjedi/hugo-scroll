@@ -1,0 +1,40 @@
+/** Links and "link buttons" */
+a {
+    color: inherit;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    // Fix font awesome icons
+    &.fa {
+        text-decoration: none;
+    }
+
+    &.btn {
+        text-decoration: none;
+        background-color: var(--color-primary);
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        color: var(--color-primary-text);
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin: 0;
+        overflow: visible;
+        padding: 10px 20px 10px 20px;
+        position: relative;
+        margin-top: 2rem;
+        cursor: pointer;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        font-weight: lighter;
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+}

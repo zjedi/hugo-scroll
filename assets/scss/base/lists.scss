@@ -1,0 +1,40 @@
+// Data lists
+dl {
+    margin: 1.6em 0;
+
+    dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em;
+    }
+
+    dd {
+    margin-left: 200px;
+    margin-bottom: 1em;
+    }
+}
+
+ul,
+ol {
+    margin: 1em 0;
+
+    // Second level of lists
+    ol,
+    ul {
+        margin: 0.4em 0;
+    }
+}
+
+li {
+    margin-left: 30px;
+}
+
+ul li {
+    list-style-type: none;
+}

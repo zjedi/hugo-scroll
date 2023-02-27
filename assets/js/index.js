@@ -7,7 +7,6 @@ var $first = $(".post.first");
 var $last = $(".post.last");
 var $fnav = $(".fixed-nav");
 var $postholder = $(".post-holder");
-var $postafter = $(".post-after");
 var $sitehead = $("#site-head");
 
 /* Globals jQuery, document */
@@ -31,11 +30,6 @@ var $sitehead = $("#site-head");
     }
   }
   $(document).ready(function () {
-    $postafter.each(function (e) {
-      var bg = $(this).parent().css("background-color");
-      $(this).css("border-top-color", bg);
-    });
-
     $("a.btn.site-menu").click(function (e) {
       srcToAnchorWithTitle($(e.target).data("title-anchor"));
     });

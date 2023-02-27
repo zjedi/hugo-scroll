@@ -22,9 +22,8 @@
 {{ $stylesheetFA := resources.Get "css/fork-awesome.css" }}
 {{ $stylesheetNormalize := resources.Get "css/normalize.css" }}
 {{ $stylesheetFonts := resources.Get "css/fonts.css" }}
-{{ $stylesheetScreen := resources.Get "css/screen.css" }}
+{{ $stylesheetScreen := ( resources.Get "scss/_index.scss" | resources.ToCSS ) }}
 {{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
-
 <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
 
 {{ template "_internal/opengraph.html" . }}

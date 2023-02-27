@@ -1,0 +1,93 @@
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--color-text);
+    margin: 3.2em 0;
+    padding: 0;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1em 0 1em -2.2em;
+    padding: 0 0 0 1em;
+    font-weight: lighter;
+
+    p {
+        margin: 0.8em 0;
+    }
+
+    small {
+        display: inline-block;
+        margin: 0.8em 0 0.8em 1.5em;
+        font-size: 0.9em;
+        color: #ccc;
+
+        &:before {
+            content: "\2014 \00A0";
+        }
+    }
+
+    cite {
+        font-weight: bold;
+
+        a {
+            font-weight: normal;
+        }
+    }
+}
+
+mark {
+    background-color: var(--color-primary);
+    filter: brightness(125%);
+}
+
+code {
+    color: var(--color-text-lighter);
+    background-color: var(--color-background-darker);
+    border-radius: 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.75em;
+    padding: 3px 5px;
+}
+
+pre {
+    background: #3a4145;
+    color: #e2e2e2;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    margin: 1.6em 0;
+    padding: 10px;
+    white-space: pre;
+    overflow-x: scroll;
+    width: 100%;
+
+    code {
+        color: inherit;
+        background: transparent;
+        font-size: inherit;
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+        border: none;
+        padding: 0;
+    }
+}
+
+kbd {
+    color: var(--color-text-main);
+    background: var(--color-background-darker);
+    border: var(--color-text-lighter) 1px solid;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    text-shadow: #fff 0 1px 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+}

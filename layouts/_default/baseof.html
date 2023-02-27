@@ -13,9 +13,14 @@
     <!-- The main JavaScript files for HugoScroll -->
     {{ $scriptIcons := resources.Get "js/icons.js" }}
     {{ $scriptIndex := resources.Get "js/index.js" }}
-    {{ $js := slice $scriptJquery $scriptIcons $scriptIndex | resources.Concat "js/script.js" | resources.Minify | resources.Fingerprint }}
+    {{ $scriptPolyfill := resources.Get "js/css-vars-ponyfill.min.js" }}
+    {{ $js := slice $scriptJquery $scriptIcons $scriptIndex $scriptPolyfill | resources.Concat "js/script.js" | resources.Minify | resources.Fingerprint }}
 
     <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" ></script>
+    <script>
+      cssVars();
+    </script>
+    
 
     <!-- A partial to be overwritten by the user.
              Simply place a custom_body.html into
