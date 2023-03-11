@@ -12,9 +12,9 @@
             {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
 
             {{ range where $sections ".Params.header_menu" "eq" true }}
-	      {{ if isset .Params "external" }}
-	         <a class='btn site-menu' href='{{ .Params.external  }}'>{{ .Title }}</a>
-	      {{ else }}
+              {{ if isset .Params "external" }}
+                 <a class='btn site-menu' href='{{ .Params.external  }}'>{{ .Title }} <icon class="fa fa-external-link"></icon></a>
+              {{ else }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
               {{ end }}
             {{ end }}
