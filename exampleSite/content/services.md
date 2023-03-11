@@ -33,3 +33,8 @@ to
 ![Let us get started on a clean slate](../images/woman-pouring-juice-on-glass-3184192.jpg)
 
 in estimated seconds.
+
+Don't believe me? Here are some bullets
+
+* If anyone can teach you to cook, I can
+* And if you already know how to cook, I will make you that much better

@@ -370,16 +370,6 @@ li {
   margin-left: 30px;
 }
 
-ul li {
-  list-style-type: none;
-}
-
-.bult {
-  display: inline;
-  float: left;
-  padding-top: 7px;
-}
-
 /* ==========================================================================
    2. Utilities - These things get used a lot
    ========================================================================== */
