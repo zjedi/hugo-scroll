@@ -11,7 +11,7 @@ If you already have a hugo site on your machine, you can simply add this theme v
 ```
 git submodule add https://github.com/janraasch/hugo-scroll.git themes/hugo-scroll
 ```
-Then, adjust the `config.toml` as detailed below.
+Then, adjust the `config.toml` as detailed below & in the file comments.
 
 If you simply want to check out the `exampleSite`, you can run
 ```

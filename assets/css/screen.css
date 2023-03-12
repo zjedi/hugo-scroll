@@ -433,20 +433,31 @@ li {
   font-size: 16px;
 }
 
-/* The details of your blog. Defined in ghost/settings/ */
+.title-and-description-guard {
+    margin: auto;
+    padding: 0.5em;
+    background-color: rgb(255 255 255 / 60%);
+    border-radius: 25px;
+    width: fit-content;
+}
+
 .blog-title {
+  color: #37501a;
   margin: 10px 0 10px 0;
   font-size: 5rem;
   letter-spacing: -1px;
+  text-shadow: white 0px 0px 7px;
 }
 
 .blog-description {
+  color: #37501a;
   margin: 0;
   font-size: 2.5rem;
   line-height: 1.5em;
   font-weight: 400;
   font-family: "Roboto Slab", serif;
   letter-spacing: 0;
+  text-shadow: white 0px 0px 7px;
 }
 
 .post-holder {
