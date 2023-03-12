@@ -7,10 +7,10 @@
 <header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
     <div class="vertical">
         <div id="site-head-content" class="inner">
-
+            {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
             {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
             {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
-
+            {{ if .Site.Params.title_guard }}</div>{{ end }}
             {{ range where $sections ".Params.header_menu" "eq" true }}
               {{ if isset .Params "external" }}
                  <a class='btn site-menu' href='{{ .Params.external  }}'>{{ .Title }} <icon class="fa fa-external-link"></icon></a>
