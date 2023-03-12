@@ -132,7 +132,7 @@ a:hover {
 
 a.btn {
   text-decoration: none;
-  background-color: #9fd067;
+  background-color: #86c440;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   color: white;
@@ -151,7 +151,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background: #86c440;
+  background: #37501a;
 }
 
 #header-arrow {
