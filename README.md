@@ -37,6 +37,9 @@ This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icon
 Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
 ```
 
+### Header logo
+Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
+
 ### External links
 You can add external link in the menu, see `external.md` in the `exampleSite`.
 

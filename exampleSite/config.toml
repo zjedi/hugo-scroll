@@ -11,7 +11,7 @@ theme = "hugo-scroll"
 # The browser tab name
 title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
-# Theme-specific variables
+# Theme-specific variables `.Site.Params.myParamName`
 [params]
 
     # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
@@ -19,13 +19,14 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
     # These "images" are used for the structured data templates. This will show up, when
     # services like Twitter or Slack want to generate a preview of a link to your site.
-    # See https://gohugo.io/templates/internal#twitter-cards and
-    # https://gohugo.io/templates/internal#open-graph.
+    # See https://gohugo.io/templates/internal#twitter-cards and https://gohugo.io/templates/internal#open-graph.
+    # NOT the actual header background image, go to _index.md instead
     images = ["images/cover-image.jpg"]
 
     # When set true, it creates a visual guard (partially transparent rounded box), preventing non-ideal background images from interfering with title/description headings
     # Ideal images are homogenous around the centre and contrasting to the text.
     # see CSS classes: .title-and-description-guard, .blog-title, .blog-description
+    # see _index.md header_headline and header_subheadline
     title_guard = false
 
     # Another "title" :-). This one is used as the site_name on the Hugo's internal
