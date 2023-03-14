@@ -8,7 +8,7 @@ That is the important part, right? You want to know what I can do for you. This 
 
 ---
 
-## Nutrition Coaching
+### Nutrition Coaching
 
 This is not an easy task. You will likely have to pay money for this. You know what - let us look at a nice picture first.
 
@@ -16,9 +16,7 @@ This is not an easy task. You will likely have to pay money for this. You know w
 
 Wow. That was nice, right? Well, call me and let us talk.
 
----
-
-## Chef Consulting
+### Chef Consulting
 
 Did you see the picture above? I can show you how to go from
 
@@ -34,4 +32,4 @@ in estimated seconds.
 
 Want to learn more about my services?
 
-Check out [this page](services) I created. It carries a lot more details...
+Check out [dedicated page](services) with a lot more details.

@@ -416,7 +416,7 @@ li {
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-#blog-logo img {
+#blog-logo {
   display: block;
   max-height: 100px;
   width: auto;
@@ -950,7 +950,7 @@ a.fn-item.active {
   .post-holder {
     padding-top: 20px;
   }
-  #blog-logo img {
+  #blog-logo {
     max-height: 80px;
   }
 
