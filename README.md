@@ -52,8 +52,6 @@ Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you
 Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and [Pull Requests](https://github.com/janraasch/hugo-scroll/pulls). 
 See [contributing guideline](https://github.com/janraasch/hugo-scroll/blob/master/contributing.md) for more. 
 
-If you do not have a GitHub-account, feel free to hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
-
 ## Special Thanks 🎁
 
 - Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
