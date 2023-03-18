@@ -26,9 +26,10 @@ tags = [
 features = ["cover-image", "favicon", "header-menu", "auto-scroll"]
 min_version = "0.111.2"
 
-[author]
-  name = "Jan Raasch"
-  homepage = "https://www.janraasch.com"
+authors = [
+  {name = "Jan Raasch", homepage = "https://www.janraasch.com"},
+  {name = "Zdenek Kedaj", homepage = "https://github.com/zjedi"}
+]
 
 [original]
   name = "GhostScroll"
