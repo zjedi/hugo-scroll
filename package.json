@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janraasch/hugo-scroll.git"
+    "url": "git+https://github.com/zjedi/hugo-scroll.git"
   },
   "author": {
     "name": "Jan Raasch",
@@ -19,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/janraasch/hugo-scroll/issues"
+    "url": "https://github.com/zjedi/hugo-scroll/issues"
   },
-  "homepage": "https://github.com/janraasch/hugo-scroll#readme",
+  "homepage": "https://github.com/zjedi/hugo-scroll#readme",
   "devDependencies": {
     "prettier": "^2.8.4",
     "prettier-plugin-go-template": "0.0.13"
