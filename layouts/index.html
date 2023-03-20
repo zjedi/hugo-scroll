@@ -2,19 +2,24 @@
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
+{{ $filtered := where $sections "Params.external" "==" nil }}
+
 <header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
     <div class="vertical">
         <div id="site-head-content" class="inner">
-
-            {{ with .Params.header_headline }}<h1 class="blog-title">{{ . }}</h1>{{ end }}
+            {{ with .Params.header_logo }}<img id="blog-logo" src="{{ . }}" />{{ end }}
+            {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
+            {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
             {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
-
+            {{ if .Site.Params.title_guard }}</div>{{ end }}
             {{ range where $sections ".Params.header_menu" "eq" true }}
                 {{ $button_title := .Title }}
-                {{ with .Params.header_menu_title }}
-                    {{ $button_title = . }}
-                {{ end }}
+                {{ with .Params.header_menu_title }}{{ $button_title = . }}{{ end }}
+              {{ if isset .Params "external" }}
+                 <a class='btn site-menu' href='{{ .Params.external }}'>{{ $button_title }} <icon class="fa fa-external-link"></icon></a>
+              {{ else }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ $button_title }}</a>
+              {{ end }}
             {{ end }}
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>
@@ -24,11 +29,9 @@
 
     <div class='fixed-nav'>
     </div>
-    {{ range $index_val, $elem_val := $sections }}
+    {{ range $index_val, $elem_val := $filtered }}
         {{ $fnav_title := .Title }}
-        {{ with .Params.navigation_menu_title }}
-            {{ $fnav_title = . }}
-        {{ end }}
+        {{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
         <div class='post-holder'>
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
                 <header class="post-header">

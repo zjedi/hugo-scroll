@@ -3,10 +3,10 @@
 
 name = "Hugo Scroll"
 license = "MIT"
-licenselink = "https://github.com/janraasch/hugo-scroll/blob/master/LICENSE"
+licenselink = "https://github.com/zjedi/hugo-scroll/blob/master/LICENSE"
 description = "A Hugo theme for pretty, quick and simple single-page websites."
-homepage = "https://github.com/janraasch/hugo-scroll"
-demosite = "https://janraasch.github.io/hugo-scroll/"
+homepage = "https://github.com/zjedi/hugo-scroll"
+demosite = "https://zjedi.github.io/hugo-scroll/"
 tags = [
   "clean",
   "contact",
@@ -24,11 +24,12 @@ tags = [
   "theme"
 ]
 features = ["cover-image", "favicon", "header-menu", "auto-scroll"]
-min_version = "0.41.0"
+min_version = "0.111.2"
 
-[author]
-  name = "Jan Raasch"
-  homepage = "https://www.janraasch.com"
+authors = [
+  {name = "Jan Raasch", homepage = "https://www.janraasch.com"},
+  {name = "Zdenek Kedaj", homepage = "https://github.com/zjedi"}
+]
 
 [original]
   name = "GhostScroll"
