@@ -37,13 +37,13 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     # The "description" of your website. This is used in the meta data of your generated html.
     description = "Nutrition Coach & Chef Consultant"
 
-    [params.meta]
-        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
-
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Markdown is supported in here as well. So you may e.g. add a link to your legal imprint-page.
     copyright = "© Jane Doe"
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
     # You can turn it off, but we would really appreciate if you don’t :-)
-    # hidedesignbyline = true
+    hidedesignbyline = false
+    
+    [params.meta]
+        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
