@@ -10,13 +10,13 @@
             {{ with .Params.header_logo }}<img id="blog-logo" src="{{ . }}" />{{ end }}
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
             {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
-            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
+            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . | safeHTML }}</h2>{{ end }}
             {{ if .Site.Params.title_guard }}</div>{{ end }}
             {{ range where $sections ".Params.header_menu" "eq" true }}
                 {{ $button_title := .Title }}
                 {{ with .Params.header_menu_title }}{{ $button_title = . }}{{ end }}
               {{ if isset .Params "external" }}
-                 <a class='btn site-menu' href='{{ .Params.external }}'>{{ $button_title }} <icon class="fa fa-external-link"></icon></a>
+                 <a class='btn site-menu' href='{{ .Params.external  }}'>{{ $button_title }} <icon class="fa fa-external-link"></icon></a>
               {{ else }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ $button_title }}</a>
               {{ end }}
@@ -35,7 +35,7 @@
         <div class='post-holder'>
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
                 <header class="post-header">
-                    <h2 class="post-title" data-fnav-title="{{ safeHTMLAttr $fnav_title }}">{{ .Title }}</h2>
+                    <h2 class="post-title" data-fnav-title="{{ $fnav_title | safeHTMLAttr }}">{{ .Title | safeHTML }}</h2>
                 </header>
                 <section class="post-content">
                     {{ .Content }}

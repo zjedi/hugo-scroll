@@ -1,14 +1,16 @@
 <footer class="site-footer">
   <div class="inner">
     {{ with .Site.Params.copyright }}
-      <section class="copyright">{{ . | markdownify }}</section>{{ end }}
-
+      <section class="copyright">{{ . | safeHTML }}</section>
+    {{ end }}
 
     <section>{{ echoParam .Site.Params "hidebyline" }}</section>
+
     {{ if ne .Site.Params.hidedesignbyline true }}
       <section>
         <a href="https://themes.gohugo.io/hugo-scroll/">Hugo Scroll</a> template
-      </section>{{ end }}
+      </section>
+    {{ end }}
 
   </div>
 </footer>
