@@ -53,7 +53,7 @@ var $sitehead = $("#site-head");
       $(".fn-item").click(function () {
         var postId = $(this).data("post-id");
         var s = $("#" + postId);
-        srcTo(s, 400);
+        srcTo(s, 200);
       });
     });
 
