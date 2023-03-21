@@ -28,7 +28,7 @@
     <div class='fixed-nav'>
     </div>
     {{ range $index_val, $elem_val := $filtered }}
-        <div class='post-holder'>
+        <div class='post-holder{{ if and (ne .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq .Site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
                 <header class="post-header">
                     <h2 class="post-title">{{ .Title | safeHTML }}</h2>
@@ -37,7 +37,7 @@
                     {{ .Content }}
                 </section>
             </article>
-            <div class='post-after'></div>
+            <div class='post-after{{ if and (ne .Site.Params.invertSectionColors true) (modBool $index_val 2) }} light{{ else if and (eq .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} light{{ end }}'></div>
         </div>
     {{ end }}
 </main>

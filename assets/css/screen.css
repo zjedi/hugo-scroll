@@ -466,7 +466,7 @@ li {
   background: #f2efe8;
   position: relative;
 }
-.post-holder.odd {
+.post-holder.dark {
   background: #b80135;
   color: white;
 }
@@ -528,7 +528,7 @@ a.fn-item.active {
   border-top: 50px solid #f2efe8;
   border-radius: 25px;
 }
-.post-after.even {
+.post-after.light {
   left: 6%;
 }
 
