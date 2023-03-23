@@ -13,12 +13,15 @@ var $sitehead = $("#site-head");
 /* Globals jQuery, document */
 (function ($) {
   "use strict";
-  function srcTo(el) {
+  function srcTo(el, dur = 1000) {
     $("html, body").animate(
       {
         scrollTop: el.offset().top,
       },
-      1000
+      dur,
+      function() {
+        window.location.hash = el.attr("id");
+      }
     );
   }
   function srcToAnchorWithTitle(str) {
@@ -41,21 +44,16 @@ var $sitehead = $("#site-head");
     });
 
     $(".post-title").each(function () {
-      var t = $(this).text();
+      var t = $(this).data("fnav-title");
       var index = $(this).parents(".post-holder").index();
+      var postId = $(this).closest("article.post").attr('id');
       $fnav.append(
-        "<a class='fn-item' item_index='" + index + "'>" + t + "</a>"
+        "<a class='fn-item' item_index='" + index + "' data-post-id='" + postId + "'>" + t + "</a>"
       );
       $(".fn-item").click(function () {
-        var i = $(this).attr("item_index");
-        var s = $(".post[item_index='" + i + "']");
-
-        $("html, body").animate(
-          {
-            scrollTop: s.offset().top,
-          },
-          400
-        );
+        var postId = $(this).data("post-id");
+        var s = $("#" + postId);
+        srcTo(s, 200);
       });
     });
 
