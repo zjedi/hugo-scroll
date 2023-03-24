@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/zjedi/hugo-scroll#readme",
   "devDependencies": {
-    "prettier": "^2.8.6",
+    "prettier": "^2.8.7",
     "prettier-plugin-go-template": "0.0.13"
   }
 }
