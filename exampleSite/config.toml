@@ -38,7 +38,7 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     description = "Nutrition Coach & Chef Consultant"
 
     # A "copyright"-line to be added at the bottom of the page.
-    # Hint: Markdown is supported in here as well. So you may e.g. add a link to your legal imprint-page.
+    # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
     copyright = "© Jane Doe"
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
