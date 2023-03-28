@@ -11,6 +11,9 @@ theme = "hugo-scroll"
 # The browser tab name
 title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
+# In order to add version information in the page's footer set to true.
+# enableGitInfo = true
+
 # Theme-specific variables `.Site.Params.myParamName`
 [params]
 
