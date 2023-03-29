@@ -7,3 +7,5 @@ Mention new feature also in relevant `readme.md` section.
 
 ## [GitHub issues](https://github.com/zjedi/hugo-scroll/issues)
 Used for tracking more complex topics and features.
+
+   * https://github.com/zjedi/hugo-scroll/issues/126 Add version information to site's footer by setting the general configuration option `enableGitInfo=true`
