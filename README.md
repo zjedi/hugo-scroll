@@ -7,7 +7,7 @@ For live demo of master branch, please visit https://zjedi.github.io/hugo-scroll
 As a fallback, see a screenshot which may be a bit outdated: ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
 
 ## Installation
-If you already have a hugo site on your machine, you can simply add this theme via
+If you already have a Hugo site on your machine, you can simply add this theme via
 ```
 git submodule add https://github.com/zjedi/hugo-scroll.git themes/hugo-scroll
 ```
@@ -24,7 +24,7 @@ For more information, read the official [Hugo setup guide][hugo-setup-guide].
 
 If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
 
-Please check out the [config.toml](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/config.toml) included on the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
+Please check out the [config.toml](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/config.toml) included in the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
 
 You can add **a new section to the homepage** by running `hugo new homepage/my-new-content.md` (or craft the file manually)
 
@@ -36,14 +36,16 @@ This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icon
 ```markdown
 Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
 ```
-
 ### Header logo
 Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
 
-### External links
-You can add external link in the menu, see `external.md` in the `exampleSite`.
+### Footer version information
+In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.com.cn/variables/git/)) set the following general option in your config.toml: `enableGitInfo = true`
 
-You can also use `extlink` shortcode to create a link opening in new tab:
+### External links
+You can add external links in the menu, see `external.md` in the `exampleSite`.
+
+You can also use `extlink` shortcode to create a link opening in a new tab:
 ```markdown
 Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
 ```
