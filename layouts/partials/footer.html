@@ -9,5 +9,13 @@
         <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
       </section>
     {{ end }}
+
+    {{ if ne .Params.enableGitInfo false }}
+      {{- if $.GitInfo -}}
+      <section>
+       version: {{ .Lastmod.Format "2006-01-02" }} | #{{ .GitInfo.AbbreviatedHash }}
+      </section>
+      {{- end -}}
+    {{ end }}
   </div>
 </footer>
