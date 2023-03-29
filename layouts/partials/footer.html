@@ -4,13 +4,10 @@
       <section class="copyright">{{ . | safeHTML }}</section>
     {{ end }}
 
-    <section>{{ echoParam .Site.Params "hidebyline" }}</section>
-
     {{ if ne .Site.Params.hidedesignbyline true }}
       <section>
         <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
       </section>
     {{ end }}
-
   </div>
 </footer>
