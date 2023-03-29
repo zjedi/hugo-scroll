@@ -40,7 +40,7 @@ Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took
 Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
 
 ### Footer version information
-In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.com.cn/variables/git/)) set the following general option in your config.toml: `enableGitInfo = true`
+In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your config.toml: `enableGitInfo = true`
 
 ### External links
 You can add external links in the menu, see `external.md` in the `exampleSite`.
