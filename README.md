@@ -1,8 +1,11 @@
 # Hugo Scroll
 A [Hugo](https://gohugo.io/) theme for pretty, quick and simple single-page websites.
 
-For live demo of master branch, please visit https://zjedi.github.io/hugo-scroll/.
 ![Test](https://github.com/zjedi/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
+
+## Live demo
+
+The current default branch is automatically deployed and can be seen at https://zjedi.github.io/hugo-scroll/.
 
 As a fallback, see a screenshot which may be a bit outdated: ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
 
@@ -12,6 +15,8 @@ If you already have a hugo site on your machine, you can simply add this theme v
 git submodule add https://github.com/zjedi/hugo-scroll.git themes/hugo-scroll
 ```
 Then, adjust the `config.toml` as detailed below & in the file comments.
+
+### Playing around with our example site
 
 If you simply want to check out the `exampleSite`, you can run
 ```
@@ -41,7 +46,7 @@ Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took
 Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
 
 ### External links
-You can add external link in the menu, see `external.md` in the `exampleSite`.
+You can add an external link in the menu, see `external.md` in the `exampleSite`.
 
 You can also use `extlink` shortcode to create a link opening in new tab:
 ```markdown
@@ -51,9 +56,13 @@ Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInst
 ### Customizing CSS
 Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
+## Changelog
+
+Project updates can be found in our [changelog](./CHANGELOG.md)
+
 ## Issues / Feedback / Contributing
-Please use [GitHub issues](https://github.com/zjedi/hugo-scroll/issues) and [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls). 
-See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more. 
+Please use [GitHub issues](https://github.com/zjedi/hugo-scroll/issues) and [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls).
+See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more.
 
 ## Special Thanks 🎁
 - [Jan Raasch](https://www.janraasch.com), original author of theme
