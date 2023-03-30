@@ -18,10 +18,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased](https://github.com/zjedi/hugo-scroll/compare/v1.0.0...HEAD)
 
 ### Added
+* 2023-03: https://github.com/zjedi/hugo-scroll/issues/126 Add version information to site's footer by setting the general configuration option `enableGitInfo=true`
+
 ### Changed
 ### Deprecated
 ### Removed
 ### Fixed
+* 2023-03: Cleanup generated markup: do not render empty `<section>` in footer.
+
 ### Security
 
 
