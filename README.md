@@ -49,6 +49,10 @@ You can also use `extlink` shortcode to create a link opening in a new tab:
 ```markdown
 Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
 ```
+Referencing and showing icons in front of the link text is possible with a new parameter `icon`:
+```markdown
+Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
+```
 
 ### Customizing CSS
 Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
