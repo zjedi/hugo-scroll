@@ -18,7 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased](https://github.com/zjedi/hugo-scroll/compare/v1.0.0...HEAD)
 
 ### Added
-* 2023-03: [#126](https://github.com/zjedi/hugo-scroll/issues/126) Add version information to site's footer by setting the general configuration option `enableGitInfo=true`
+* 2023-03: [#126](https://github.com/zjedi/hugo-scroll/issues/126) Add version information to site's footer by setting the general configuration option `enableGitInfo=true`.
+* 2023-03: [#129](https://github.com/zjedi/hugo-scroll/pull/129) External links may contain icons as well, set attribute `icon` accordingly.
 
 ### Changed
 ### Deprecated
