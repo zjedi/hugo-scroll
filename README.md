@@ -56,10 +56,6 @@ Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInst
 ### Customizing CSS
 Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
-## Changelog
-
-Project updates can be found in our [changelog](./CHANGES.md)
-
 ## Issues / Feedback / Contributing
 Please use [GitHub issues](https://github.com/zjedi/hugo-scroll/issues) and [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls).
 See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more.
