@@ -9,7 +9,7 @@ Do not forget to mention new feature in a relevant subsection of [README.md](./R
 
 Alternatively you may use GitHub issues for more complex topics and features.
 
-## [Changelog](https://github.com/zjedi/hugo-scroll/blob/master/CHANGELOG.md)
+## [Changelog](./CHANGELOG.md)
 
 Feel free to add your contributions to our CHANGELOG, which tracks:
 * **Added** for new features.
