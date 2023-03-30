@@ -58,7 +58,7 @@ Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you
 
 ## Changelog
 
-Project updates can be found in our [changelog](./CHANGELOG.md)
+Project updates can be found in our [changelog](./CHANGES.md)
 
 ## Issues / Feedback / Contributing
 Please use [GitHub issues](https://github.com/zjedi/hugo-scroll/issues) and [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls).
