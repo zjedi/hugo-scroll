@@ -12,18 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed for any bug fixes.
 * Security in case of vulnerabilities.
 
-## [Unreleased](https://github.com/zjedi/hugo-scroll/compare/v1.0.0...HEAD)
+## [Unreleased](https://github.com/zjedi/hugo-scroll/compare/v.1.0.0...master)
 
-### Added
-* 2023-03: [#126](https://github.com/zjedi/hugo-scroll/issues/126) Add version information to site's footer by setting the general configuration option `enableGitInfo=true`.
-* 2023-03: [#129](https://github.com/zjedi/hugo-scroll/pull/129) External links may contain icons as well, set attribute `icon` accordingly.
-* 2023-03: [#99](https://github.com/zjedi/hugo-scroll/pull/99) Add shortcode `extlink` to allow external links.
-* 2023-03: [#106](https://github.com/zjedi/hugo-scroll/pull/106) title_guard feature, color made more contrasting
-### Changed
-* Moved CSS & JS from `static` to `assets`, used pipelined concatenation, minification fingerprinting
-* 2023-03: [#109](https://github.com/zjedi/hugo-scroll/pull/109) Transfer repository ownership: https://github.com/zjedi/hugo-scroll
-* 2023-03: [#122](https://github.com/zjedi/hugo-scroll/pull/122) Plain HTML in header & footer; Markdown not supported anymore.
+- **JS cleanup / CSS refactoring**, possibly causing some pain if you have extensive CSS customisations in screen.css #4, #61, #102. For backwards compatibility, a released tag` v1.0.0` was created just in case some projects needed to fix the legacy version. However, I won't actively support the legacy branch.
+- New features: #70 , #46 , #118
+- More features #116 , #119
 
+## [1.0.0 Legacy Snapshot](https://github.com/zjedi/hugo-scroll/releases/tag/v.1.0.0)
 
 # Template for new releases
 ## [x.y.z](https://github.com/zjedi/hugo-scroll/compare/v1.0.0...vx.y.z)
