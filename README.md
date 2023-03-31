@@ -1,13 +1,13 @@
-# Hugo Scroll
-A [Hugo](https://gohugo.io/) theme for pretty, quick and simple single-page websites.
+<h1 align=center>Hugo Scroll <a href="https://zjedi.github.io/hugo-scroll/" rel="nofollow">Demo</a></h1>
 
+Clean, responsive, single-page [Hugo](https://gohugo.io/) website theme.
+
+[![hugo-scroll](https://img.shields.io/badge/Hugo--Themes-HugoScroll-blue)](https://themes.gohugo.io/themes/hugo-scroll/)
 ![Test](https://github.com/zjedi/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
+[![GitHub](https://img.shields.io/github/license/zjedi/hugo-scroll)](https://github.com/zjedi/hugo-scroll/blob/master/LICENSE)
 
-## Live demo
-
-The current default branch is automatically deployed and can be seen at https://zjedi.github.io/hugo-scroll/.
-
-As a fallback, see a screenshot which may be a bit outdated: ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
+Promo image which may be a bit outdated:<br/>
+![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
 
 ## Installation
 If you already have a Hugo site on your machine, you can simply add this theme via
@@ -63,7 +63,11 @@ Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www
 Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
 ## Issues / Feedback / Contributing
-Please use [GitHub issues](https://github.com/zjedi/hugo-scroll/issues) and [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls).
+[Discussion](https://github.com/zjedi/hugo-scroll/discussions) for Q&A (when unsure), 
+[Issues](https://github.com/zjedi/hugo-scroll/issues) for tracking,
+[Pull Requests](https://github.com/zjedi/hugo-scroll/pulls) for contributions.
+
+
 See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more.
 
 ## Special Thanks 🎁
@@ -71,8 +75,6 @@ See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/co
 - [Yonatan Wolowelsky](https://github.com/grmmph), author of [GhostScroll](https://github.com/grmmph/GhostScroll) theme, which formed the basis of this [Hugo](https://gohugo.io/) theme.
 - [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite).
 
-## License
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
 [fork-awesome-icons]: https://forkaweso.me/Fork-Awesome/icons/
