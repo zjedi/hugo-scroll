@@ -20,6 +20,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2.6.0
         with:
           hugo-version: latest
+          extended: true
 
       - name: Build local ./exampleSite
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://zjedi.github.io/hugo-scroll/
