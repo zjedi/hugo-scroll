@@ -1,52 +1,8 @@
 body {
-  --color-text: var(--color-text-main);
-  --color-background: var(--color-background-main);
+  --color-text: var(--section-light-text-color);
+  --color-background: var(--section-light-bg-color);
 }
-
-.post-holder {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  position: relative;
-
-  &.dark {
-    // override variables for alternative style
-    --color-text: var(--color-text-alt);
-    --color-background: var(--color-background-alt);
-
-    background-color: var(--color-background-alt);
-    color: var(--color-text-alt);
-
-    // Fix <hr> color
-    hr {
-      border-color: var(--color-text-alt);
-    }
-
-    // On alt posts move the triangle to the right and match the background the color
-    .post-after {
-      left: unset;
-      right: 6%;
-      border-top-color: var(--color-background-alt);
-    }
-  }
-
-  /**
-      The tri-angular parts between posts
-    */
-  .post-after {
-    position: absolute;
-    bottom: -40px;
-    z-index: 1;
-    left: 6%;
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 50px solid var(--color-background);
-    border-radius: 25px;
-  }
-}
+/* ===== Cover =======*/
 
 #blog-logo {
   display: block;
@@ -56,7 +12,6 @@ body {
   line-height: 0;
 }
 
-/* Big cover image on the home page */
 #site-head {
   position: relative;
   display: table;
@@ -64,14 +19,14 @@ body {
   height: 100%;
   margin-bottom: 0rem;
   text-align: center;
-  color: var(--color-text-cover);
-  background: var(--color-background-alt) no-repeat center center;
+  color: var(--cover-text-color);
+  background: var(--section-light-bg-color) no-repeat center center;
   background-size: cover;
 
   .title-and-description-guard {
     margin: auto;
     padding: 0.6em;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--cover-title-and-description-guard-bg-color);
     border-radius: 25px;
     width: fit-content;
   }
@@ -80,7 +35,7 @@ body {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
-    text-shadow: white 0px 0px 7px;
+    text-shadow: var(--cover-title-text-shadow);
   }
 
   .blog-description {
@@ -90,14 +45,14 @@ body {
     font-weight: 400;
     font-family: "Roboto Slab", serif;
     letter-spacing: 0;
-    text-shadow: white 0px 0px 7px;
+    text-shadow: var(--cover-title-text-shadow);
   }
 
   // Landing screen menu
   a.btn {
     text-decoration: none;
-    background-color: var(--color-glow);
-    color: var(--color-glow-contrast);
+    background-color: var(--highlight);
+    color: var(--highlight-contrast);
     border-radius: 6px;
     -webkit-border-radius: 6px;
     display: inline-block;
@@ -114,8 +69,8 @@ body {
     font-weight: lighter;
 
     &:hover {
-      color: var(--color-glow-dark-contrast);;
-      background-color: var(--color-glow-dark);
+      color: var(--highlight-inverse-contrast);
+      background-color: var(--highlight-inverse);
     }
   }
 
@@ -140,56 +95,7 @@ body {
   }
 }
 
-/** For single pages and 404 error page the "back" button */
-#back {
-  color: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  padding: 6px;
-  font-size: 16px;
-}
-
-/** ==========  Site footer ============ */
-.site-footer {
-  /*TODO extract footer colors to variables*/
-  background: #22343a;
-  color: #bbc7cc;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.3rem;
-  position: relative;
-  margin: 0rem 0 0 0;
-  padding: 1rem 0;
-
-  line-height: 1.5em;
-  text-align: center;
-}
-
-.site-footer a {
-  color: #bbc7cc;
-  text-decoration: underline;
-}
-
-.site-footer a:hover {
-  color: var(--color-primary);
-}
-
-/**
-  Every post, on every page, gets this style on its <article> tag
-  Not inside the post holder as this also applies for single pages
-*/
-.post {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 0rem auto;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  height: 70%;
-  word-break: break-word;
-  hyphens: auto;
-}
-
+// ========== Sticky menus ===========
 .fixed-nav {
   display: none;
   opacity: 1;
@@ -204,7 +110,6 @@ body {
   font-weight: bold;
 }
 
-// Navigation items
 a.fn-item {
   display: block;
   cursor: pointer;
@@ -213,7 +118,7 @@ a.fn-item {
 
   &:hover,
   &.active {
-    color: var(--color-primary);
+    color: var(--sticky-menu-text-color);
   }
 
   &.active {
@@ -221,6 +126,7 @@ a.fn-item {
   }
 }
 
+/* ========= Content ==========*/
 .post-title {
   margin: 0;
 
@@ -229,46 +135,63 @@ a.fn-item {
   }
 }
 
-/* UNUSED STYLES
-.post-after {
-  position: absolute;
-  bottom: -40px;
-  right: 6%;
-  z-index: 1;
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 50px solid #f2efe8;
-  border-radius: 25px;
-}
-.post-after.light {
-  left: 6%;
+.post-holder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  position: relative;
+
+  &.dark {
+    // override variables for alternative style
+    --color-text: var(--section-dark-text-color);
+    --color-background: var(--section-dark-bg-color);
+
+    background-color: var(--section-dark-bg-color);
+    color: var(--section-dark-text-color);
+
+    // Fix <hr> color
+    hr {
+      border-color: var(--section-dark-text-color);
+    }
+
+    // On alt posts move the triangle to the right and match the background the color
+    .post-after {
+      left: unset;
+      right: 6%;
+      border-top-color: var(--section-dark-bg-color);
+    }
+  }
+
+  /* The triangular parts between posts */
+  .post-after {
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    left: 6%;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 50px solid var(--color-background);
+    border-radius: 25px;
+  }
 }
 
-.post-excerpt p {
-  margin: 1.6rem 0 0 0;
-  font-size: 0.9em;
-  line-height: 1.6em;
-}
-
-.post-meta {
-  display: inline-block;
-  margin: 0 0 5px 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.5rem;
-  color: #9eabb3;
-}
-
-.post-meta a {
-  color: #9eabb3;
-  text-decoration: none;
-}
-
-.post-meta a:hover {
-  text-decoration: underline;
-}
+/* Every post, on every page, gets this style on its <article> tag
+  Not inside the post holder as this also applies for single pages
 */
+.post {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 0rem auto;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  height: 70%;
+  word-break: break-word;
+  hyphens: auto;
+}
 
 /* ======= Single pages =========== */
 .post-template {
@@ -298,36 +221,26 @@ a.fn-item {
   margin: 0 auto;
 }
 
-/* CSS tooltip saying "Subscribe!" - initially hidden */
-.tooltip {
-  opacity: 0;
-  display: inline-block;
-  padding: 4px 8px 5px 8px;
-  position: absolute;
-  top: -23px;
-  left: -23px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 1em;
+
+/** ==========  Site footer ============ */
+.site-footer {
+  background: var(--footer-color-background);
+  color: var(--footer-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  position: relative;
+  margin: 0rem 0 0 0;
+  padding: 1rem 0;
+
+  line-height: 1.5em;
   text-align: center;
-  background: #50585d;
-  border-radius: 20px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, top 0.3s ease;
 }
 
-/* The little chiclet arrow under the tooltip, pointing down */
-.tooltip:after {
-  content: "";
-  border-width: 5px 5px 0 5px;
-  border-style: solid;
-  border-color: #50585d transparent;
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  margin-left: -5px;
-  z-index: 220;
-  width: 0;
+.site-footer a {
+  color: var(--footer-color);
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: var(--sticky-menu-text-color);
 }

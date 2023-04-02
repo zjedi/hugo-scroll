@@ -11,7 +11,7 @@ body {
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
   line-height: 1.6em;
-  color: #3a4145;
+  color: var(--section-light-text-color);
 }
 
 ::-moz-selection {
@@ -72,7 +72,7 @@ h6 {
   font-size: 2rem;
 }
 
-p,{
+p{
   margin: 1em 0;
 }
 
@@ -84,7 +84,7 @@ a {
     -moz-transition: all ease 0.3s;
 
     &:hover {
-        color: var(--color-primary);
+        color: var(--sticky-menu-text-color);
     }
 
     // Fix font awesome icons
@@ -138,8 +138,7 @@ hr {
     padding: 0;
 }
 
-/** Helper to be inserted by JS before quotations
-//TODO is this used anywhere?*/
+/** Helper to be inserted by JS before quotations*/
 .quo {
     margin-right: 10px;
     margin-left: 10px;
@@ -151,7 +150,7 @@ blockquote {
     box-sizing: border-box;
     margin: 1em 0 1em -2.2em;
     padding: 0 0 0 1em;
-    font-weight: lighter;
+    color: var(--section-uni-quote);
 
     p {
         margin: 0.8em 0;
@@ -178,13 +177,13 @@ blockquote {
 }
 
 mark {
-    background-color: var(--color-primary);
+    background-color: var(--sticky-menu-text-color);
     filter: brightness(125%);
 }
 
 code, tt {
-    color: var(--color-text-lighter);
-    background-color: var(--color-background-darker);
+    color: var(--section-light-text-color);
+    background-color: var(--section-uni-code-bg-color);
     border-radius: 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.75em;
@@ -192,8 +191,8 @@ code, tt {
 }
 
 code {
-    color: var(--color-text-lighter);
-    background-color: var(--color-background-darker);
+    color: var(--section-light-text-color);
+    background-color: var(--section-uni-code-bg-color);
     border-radius: 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.75em;
@@ -201,7 +200,7 @@ code {
 }
 
 pre {
-    background: #3a4145;
+    background: var(--section-light-text-color);
     color: #e2e2e2;
     border: 1px solid #343434;
     border-radius: 3px;
@@ -227,9 +226,9 @@ pre {
 }
 
 kbd {
-    color: var(--color-text-main);
-    background: var(--color-background-darker);
-    border: var(--color-text-lighter) 1px solid;
+    color: var(--section-light-text-color);
+    background: var(--section-uni-code-bg-color);
+    border: var(--section-light-text-color) 1px solid;
     border-radius: 4px;
     display: inline-block;
     font-size: 0.9em;
