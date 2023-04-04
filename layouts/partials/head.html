@@ -19,12 +19,14 @@
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{{ $stylesheetFA := resources.Get "css/fork-awesome.css" }}
 {{ $stylesheetNormalize := resources.Get "css/normalize.css" }}
+{{ $stylesheetFA := resources.Get "css/fork-awesome.css" }}
 {{ $stylesheetFonts := resources.Get "css/fonts.css" }}
-{{ $stylesheetScreen := resources.Get "css/screen.css" }}
-{{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
+{{ $stylesheetGeneric := resources.Get "css/generic.css" }}
 
+{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | resources.ToCSS ) }}
+
+{{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetGeneric $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
 
 {{ template "_internal/opengraph.html" . }}

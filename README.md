@@ -1,4 +1,4 @@
-<h1 align=center>Hugo Scroll <a href="https://zjedi.github.io/hugo-scroll/" rel="nofollow">Demo</a></h1>
+<h1 align=center>Hugo Scroll 📜 <a href="https://zjedi.github.io/hugo-scroll/" rel="nofollow">Demo</a></h1>
 
 Clean, responsive, single-page [Hugo](https://gohugo.io/) website theme.
 
@@ -9,7 +9,19 @@ Clean, responsive, single-page [Hugo](https://gohugo.io/) website theme.
 Promo image which may be a bit outdated:<br/>
 ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
 
-## Installation
+## ⭐ Feature highlights
+- Responseive to screen size/shape
+- SEO friendly
+- Customizable
+- [Fork Awesome Icons][fork-awesome-icons] out of the box
+- Header logo
+- Visual guards to guarantee readability
+- External links
+- JS/CSS Assets optimized (Minification, Fingerpriting, pipeline-processed 
+into single file)
+- git info in footer (opt-in)
+
+## 🔑 Installation
 If you already have a Hugo site on your machine, you can simply add this theme via
 ```
 git submodule add https://github.com/zjedi/hugo-scroll.git themes/hugo-scroll
@@ -35,7 +47,20 @@ You can add **a new section to the homepage** by running `hugo new homepage/my-n
 
 To create **a page separate from the homepage**, run `hugo new my-new-page.md`
 
-## Features
+
+## 🔧 Feature details 🔨
+
+### Customizing CSS
+Add a [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html) file to your `layouts/partials` directory. 
+- You can use `<style>` tag to embed the overrides (better performance-wise)
+- Alternatively you can `<link>` your own `custom.css`
+
+`CSS` variables `var(--some-var-name)` from `assets\css\variables.scss` can be overridden by adding
+```scss
+:root {
+  --some-var-name: blue!important;
+}
+```
 ### Icons
 This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
 ```markdown
@@ -59,10 +84,9 @@ Referencing and showing icons in front of the link text is possible with a new p
 Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
 ```
 
-### Customizing CSS
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
-## Issues / Feedback / Contributing
+
+## 🐛 Issues / 💡 Feedback / 👑 Contributing
 [Discussion](https://github.com/zjedi/hugo-scroll/discussions) for Q&A (when unsure), 
 [Issues](https://github.com/zjedi/hugo-scroll/issues) for tracking,
 [Pull Requests](https://github.com/zjedi/hugo-scroll/pulls) for contributions.
@@ -70,10 +94,10 @@ Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you
 
 See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more.
 
-## Special Thanks 🎁
+## 👏 Special Thanks 
 - [Jan Raasch](https://www.janraasch.com), original author of theme
 - [Yonatan Wolowelsky](https://github.com/grmmph), author of [GhostScroll](https://github.com/grmmph/GhostScroll) theme, which formed the basis of this [Hugo](https://gohugo.io/) theme.
-- [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite).
+- [Pexels](https://www.pexels.com), for supplying _free_ stock photos.
 
 
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
