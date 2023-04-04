@@ -9,6 +9,52 @@ Clean, responsive, single-page [Hugo](https://gohugo.io/) website theme.
 Promo image which may be a bit outdated:<br/>
 ![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/zjedi/hugo-scroll/master/images/tn.png)
 
+## Feature highlights
+- Responseive to screen size/shape
+- SEO friendly
+- Customizable
+- [Fork Awesome Icons][fork-awesome-icons] out of the box
+- Header logo
+- Visual guards to guarantee readability
+- External links
+- JS/CSS Assets optimized (Minification, Fingerpriting, pipeline-processed into single file)
+
+## Feature details
+### Icons
+This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
+```markdown
+Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
+```
+### Header logo
+Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
+
+### Footer version information
+In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your config.toml: `enableGitInfo = true`
+
+### External links
+You can add an external link in the menu, see `external.md` in the `exampleSite`.
+
+You can also use `extlink` shortcode to create a link opening in a new tab:
+```markdown
+Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
+```
+Referencing and showing icons in front of the link text is possible with a new parameter `icon`:
+```markdown
+Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
+```
+
+### Customizing CSS
+Add a [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html) file to your `layouts/partials` directory. 
+- You can use `<style>` tag to embed the overrides (better performance-wise)
+- Alternatively you can `<link>` your own `custom.css`
+
+`CSS` variables `var(--some-var-name)` from `assets\css\variables.scss` can be overridden by adding
+```scss
+:root {
+  --some-var-name: blue!important;
+}
+```
+
 ## Installation
 If you already have a Hugo site on your machine, you can simply add this theme via
 ```
@@ -34,33 +80,6 @@ Please check out the [config.toml](https://github.com/zjedi/hugo-scroll/blob/mas
 You can add **a new section to the homepage** by running `hugo new homepage/my-new-content.md` (or craft the file manually)
 
 To create **a page separate from the homepage**, run `hugo new my-new-page.md`
-
-## Features
-### Icons
-This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
-```markdown
-Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
-```
-### Header logo
-Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
-
-### Footer version information
-In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your config.toml: `enableGitInfo = true`
-
-### External links
-You can add an external link in the menu, see `external.md` in the `exampleSite`.
-
-You can also use `extlink` shortcode to create a link opening in a new tab:
-```markdown
-Visit as at {{<extlink text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
-```
-Referencing and showing icons in front of the link text is possible with a new parameter `icon`:
-```markdown
-Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
-```
-
-### Customizing CSS
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
 
 ## Issues / Feedback / Contributing
 [Discussion](https://github.com/zjedi/hugo-scroll/discussions) for Q&A (when unsure), 
