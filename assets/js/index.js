@@ -73,7 +73,7 @@ var $sitehead = $("#site-head");
         $post.each(function () {
           if (($(window).height() + w) > ($(document).height() - $(".site-footer").height())) {
             var l = $postholder.length;
-            $(".fn-item[item_index='" + (l - 1) + "']").removeClass("active")
+            $(".fn-item").removeClass("active")
             $(".fn-item[item_index='" + (l) + "']").addClass("active")
           } else {
             var f = $(this).offset().top;
