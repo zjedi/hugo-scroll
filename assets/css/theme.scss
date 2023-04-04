@@ -96,12 +96,14 @@ body {
 }
 
 // ========== Sticky menus ===========
+/* Left sticky menu */
 .fixed-nav {
+  background-color: var(--section-light-bg-color);
+  border-radius: 0 25px 20px 0;
+  padding: 1em 1.5em;
   display: none;
-  opacity: 1;
   position: fixed;
   top: 40px;
-  left: 2%;
   z-index: 99999;
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
