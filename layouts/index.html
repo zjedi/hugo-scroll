@@ -4,8 +4,21 @@
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 
 <!-- Welcome screen that scrolls out of view -->
-<header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+{{ if not .Params.header_use_video }}
+<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+{{ else }}
+<header id="site-head">
+{{ end }}
+
     <div class="vertical">
+
+        {{ if .Params.header_use_video }}
+            <!-- A partial to be overwritten by the user.
+            Simply place a custom_header_video.html into
+            your local /layouts/partials-directory -->
+            {{- partial "custom_header_video.html" . -}}
+        {{ end }}
+
         <div id="site-head-content" class="inner">
             {{ with .Params.header_logo }}<img id="blog-logo" src="{{ . }}" />{{ end }}
 

@@ -12,7 +12,12 @@ body {
   line-height: 0;
 }
 
-#site-head {
+#site-head.withCenteredImage{
+  /* can't be used together with video */
+  background: var(--section-light-bg-color) no-repeat center center;
+}
+
+#site-head, #site-head.withCenteredImage {
   position: relative;
   display: table;
   width: 100%;
@@ -20,8 +25,21 @@ body {
   margin-bottom: 0rem;
   text-align: center;
   color: var(--cover-text-color);
-  background: var(--section-light-bg-color) no-repeat center center;
   background-size: cover;
+
+  /* Big cover video at the landing area */
+  video {
+    bottom: 0;
+    height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: -100;
+  }
 
   .title-and-description-guard {
     margin: auto;
