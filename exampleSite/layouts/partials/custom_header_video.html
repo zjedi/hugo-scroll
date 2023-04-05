@@ -1,0 +1,11 @@
+<video playsinline="" autoplay="true" muted="" loop=""
+    poster="https://www.ledger.com/wp-content/themes/ledger-v2/public/images/homepage/home-hero-ledger.jpg">
+    <!-- 
+    <source src="https://cdn.shopify.com/s/files/1/2974/4858/files/home-hero-mobile.webm?v=1637155649" type="video/webm">
+    <source src="https://cdn.shopify.com/s/files/1/2974/4858/files/home-hero-mobile.mp4?v=1637155649" type="video/mp4">
+    <source src="https://cdn.shopify.com/s/files/1/2974/4858/files/home-hero-mobile.mov?v=1637155649" type="video/mov">
+    -->
+
+    {{ $videoResource := resources.Get "cover/pexels-pressmaster-3209239-960x540-25fps.mp4" }}
+    <source src="{{ $videoResource.Permalink }}" type="video/mp4">
+</video>
