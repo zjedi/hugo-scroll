@@ -13,6 +13,7 @@ Promo image which may be a bit outdated:<br/>
 - Responseive to screen size/shape
 - SEO friendly
 - Customizable
+- Video cover
 - [Fork Awesome Icons][fork-awesome-icons] out of the box
 - Header logo
 - Visual guards to guarantee readability
@@ -69,6 +70,9 @@ Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took
 ### Header logo
 Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
 
+### Video cover
+Set `header_use_video: true` in `/exampleSite/content/_index.md` and define video source via custom partial, such as `exampleSite/layouts/partials/custom_header_video.html`.
+
 ### Footer version information
 In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your config.toml: `enableGitInfo = true`
 
@@ -83,8 +87,6 @@ Referencing and showing icons in front of the link text is possible with a new p
 ```markdown
 Visit as at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www.instagram.com/yourInstagramName/">}}
 ```
-
-
 
 ## 🐛 Issues / 💡 Feedback / 👑 Contributing
 [Discussion](https://github.com/zjedi/hugo-scroll/discussions) for Q&A (when unsure), 
