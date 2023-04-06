@@ -4,6 +4,7 @@ Clean, responsive, single-page [Hugo](https://gohugo.io/) website theme.
 
 [![hugo-scroll](https://img.shields.io/badge/Hugo--Themes-HugoScroll-blue)](https://themes.gohugo.io/themes/hugo-scroll/)
 ![Test](https://github.com/zjedi/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a56faf45-76fa-4bdf-b9d4-35cfc7d620cf/deploy-status)](https://app.netlify.com/sites/hugo-scroll/deploys)
 [![GitHub](https://img.shields.io/github/license/zjedi/hugo-scroll)](https://github.com/zjedi/hugo-scroll/blob/master/LICENSE)
 
 Promo image which may be a bit outdated:<br/>
@@ -107,4 +108,4 @@ See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/co
 [hugo-shortcodes]: https://gohugo.io/content-management/shortcodes/
 
 
-test
+test2
