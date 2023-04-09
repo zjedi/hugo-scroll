@@ -108,6 +108,7 @@ body {
     -moz-transition: all ease 0.3s;
 
     &:hover {
+      color: inherit;
       opacity: 0.9;
     }
   }

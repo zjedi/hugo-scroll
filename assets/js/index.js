@@ -30,15 +30,23 @@ var $sitehead = $("#site-head");
     }
   }
   $(document).ready(function () {
-    $("a.btn.site-menu").click(function (e) {
-      e.preventDefault();
-      srcToAnchorWithTitle($(e.target).data("title-anchor"));
-    });
-    $("#header-arrow").click(function () {
-      srcTo($first);
-    });
+    // fallback to jQuery animate if smooth scrolling is not supported
+    if (!"scrollBehavior" in document.documentElement.style) {
+      // Cover buttons
+      $("a.btn.site-menu").click(function (e) {
+        e.preventDefault();
+        srcToAnchorWithTitle($(e.target).data("title-anchor"));
+      });
+
+      // cover arrow button
+      $("#header-arrow").click(function (e) {
+        e.preventDefault()
+        srcTo($first);
+      });
+    }
 
     $(".post.last").next(".post-after").hide();
+
     if ($sitehead.length) {
       $(window).scroll(function () {
         var w = $(window).scrollTop();

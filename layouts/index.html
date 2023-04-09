@@ -2,6 +2,7 @@
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
+{{ $content := where $sections "Params.external" "==" nil }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
@@ -38,14 +39,15 @@
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
               {{ end }}
             {{ end }}
-            <i id='header-arrow' class="fa fa-angle-down"></i>
+            {{ with (index $content 0) }}
+                {{ $first_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $first_title = . }}{{ end }}
+                <a id='header-arrow' href="#{{- anchorize $first_title -}}" aria-label="Go to first section"><i class="fa fa-angle-down"></i></a>
+            {{ end }}
         </div>
     </div>
 </header>
 
 <main class="content" role="main">
-    {{ $content := where $sections "Params.external" "==" nil }}
-
     <!-- Render sticky left navigation menu -->
     <div class='fixed-nav'>
         {{ range $index_val, $elem_val := $content }}
