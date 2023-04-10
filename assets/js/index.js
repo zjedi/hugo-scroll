@@ -7,7 +7,6 @@ var $first = $(".post.first");
 var $last = $(".post.last");
 var $fnav = $(".fixed-nav");
 var $postholder = $(".post-holder");
-var $postafter = $(".post-after");
 var $sitehead = $("#site-head");
 
 /* Globals jQuery, document */
@@ -31,33 +30,23 @@ var $sitehead = $("#site-head");
     }
   }
   $(document).ready(function () {
-    $postafter.each(function (e) {
-      var bg = $(this).parent().css("background-color");
-      $(this).css("border-top-color", bg);
-    });
-
-    $("a.btn.site-menu").click(function (e) {
-      srcToAnchorWithTitle($(e.target).data("title-anchor"));
-    });
-    $("#header-arrow").click(function () {
-      srcTo($first);
-    });
-
-    $(".post-title").each(function () {
-      var t = $(this).data("fnav-title");
-      var index = $(this).parents(".post-holder").index();
-      var postId = $(this).closest("article.post").attr('id');
-      $fnav.append(
-        "<a class='fn-item' item_index='" + index + "' data-post-id='" + postId + "'>" + t + "</a>"
-      );
-      $(".fn-item").click(function () {
-        var postId = $(this).data("post-id");
-        var s = $("#" + postId);
-        srcTo(s, 200);
+    // fallback to jQuery animate if smooth scrolling is not supported
+    if (!"scrollBehavior" in document.documentElement.style) {
+      // Cover buttons
+      $("a.btn.site-menu").click(function (e) {
+        e.preventDefault();
+        srcToAnchorWithTitle($(e.target).data("title-anchor"));
       });
-    });
+
+      // cover arrow button
+      $("#header-arrow").click(function (e) {
+        e.preventDefault()
+        srcTo($first);
+      });
+    }
 
     $(".post.last").next(".post-after").hide();
+
     if ($sitehead.length) {
       $(window).scroll(function () {
         var w = $(window).scrollTop();

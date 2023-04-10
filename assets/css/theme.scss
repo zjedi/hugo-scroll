@@ -108,6 +108,7 @@ body {
     -moz-transition: all ease 0.3s;
 
     &:hover {
+      color: inherit;
       opacity: 0.9;
     }
   }
@@ -241,7 +242,6 @@ a.fn-item {
   max-width: 100%;
   margin: 0 auto;
 }
-
 
 /** ==========  Site footer ============ */
 .site-footer {
