@@ -55,7 +55,7 @@ var $sitehead = $("#site-head");
 
         if (w >= Math.floor(g) && w <= Math.ceil(h)) {
           $(".fixed-nav").fadeOut("fast");
-        } else if ($(window).width() > 500) {
+        } else {
           $(".fixed-nav").css("display", "flex").fadeIn("fast");
         }
 
