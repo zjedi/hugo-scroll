@@ -88,8 +88,11 @@ var $sitehead = $("#site-head");
       });
     }
 
-    $('ul').addClass("fa-ul");
-    $("ul li").prepend('<span class="fa-li"><i class="fa fa-asterisk"></i></span>');
+    var listElement = getComputedStyle(document.documentElement).getPropertyValue('--listElement');
+    if (listElement.length > 0) {
+      $('ul').addClass("fa-ul");
+      $("ul li").prepend('<span class="fa-li"><i class="fa ' + listElement + '"></i></span>');
+    }
     $("blockquote p").prepend('<span class="quo fa fa-quote-left"></span>');
     $("blockquote p").append('<span class="quo fa fa-quote-right"></span>');
   });
