@@ -38,4 +38,8 @@
     /* === Footer === */
     --footer-color-background: #22343a;
     --footer-color: #bbc7cc;
+
+    /* === Lists === */
+    /* define listElement for unnumbered lists, leave empty for default listElement */
+    --listElement: fa-dashcube;
 }
