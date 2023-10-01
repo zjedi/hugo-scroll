@@ -50,9 +50,22 @@
 <main class="content" role="main">
     <!-- Render sticky left navigation menu -->
     <div class='fixed-nav'>
+        {{ $menu_offset := 1 }}
+        {{ if eq .Params.header_gbtt_weight 1 }}
+            {{ $fnav_title := "Start" }}{{ with .Params.header_gbtt_title }}{{ $fnav_title = . }}{{ end }}
+            {{ $index_val := $menu_offset }}<a class='fn-item' item_index='{{ $index_val }}' href='/'>{{ $fnav_title | safeHTML }}</a>
+            {{ $menu_offset = 2 }}
+        {{ end }}
+        {{ $last_index_val := 0 }}
         {{ range $index_val, $elem_val := $content }}
             {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
-            <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize $fnav_title }}'>{{ $fnav_title | safeHTML }}</a>
+            <a class='fn-item' item_index='{{ (add $index_val $menu_offset) }}' href='#{{ anchorize $fnav_title }}'>{{ $fnav_title | safeHTML }}</a>
+            {{ $last_index_val = $index_val }}
+        {{ end }}
+        {{ $menu_offset = (add $last_index_val 2) }}
+        {{ if eq .Params.header_gbtt_weight 99 }}
+            {{ $fnav_title := "Start" }}{{ with .Params.header_gbtt_title }}{{ $fnav_title = . }}{{ end }}
+            {{ $index_val := $menu_offset }}<a class='fn-item' item_index='{{ $index_val }}' href='/'>{{ $fnav_title | safeHTML }}</a>
         {{ end }}
     </div>
 
