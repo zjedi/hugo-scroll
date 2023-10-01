@@ -11,4 +11,11 @@ header_logo: "images/chef-hat.png"
 # Headers are safeHTML, you can use HTML tags such as b,i,u,br
 header_headline: "Jane Doe"
 header_subheadline: "<b>Nutrition</b> Coach & <b>Chef</b> Consultant"
+
+# Add a 'Go back to top' item to the navigation menu
+# Title: name of navigation menu entry
+# Weight (i. e. position in menu): 0 = no menu entry, 1 = add as first entry, 99 = ad as last entry
+header_gbtt_title: "Return To Top"
+header_gbtt_weight: 0
+
 ---
