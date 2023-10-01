@@ -216,7 +216,10 @@ a.fn-item {
 }
 
 /* ======= Single pages =========== */
-.post-template {
+.page-template {
+
+  background-color: var(--single-page-bg-color);
+  color: var(--single-page-text-color);
 
   // Tweak the .post wrapper style
   .post {
