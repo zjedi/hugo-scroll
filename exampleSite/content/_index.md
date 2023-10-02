@@ -14,8 +14,7 @@ header_subheadline: "<b>Nutrition</b> Coach & <b>Chef</b> Consultant"
 
 # Add a 'Go back to top' item to the navigation menu
 # Title: name of navigation menu entry
-# Weight (i. e. position in menu): 0 = no menu entry, 1 = add as first entry, 99 = ad as last entry
+# Weight (i. e. position in menu): none = no menu entry, first = add as first entry, last = ad as last entry
 header_gbtt_title: "Return To Top"
-header_gbtt_weight: 0
-
+header_gbtt_weight: last
 ---
