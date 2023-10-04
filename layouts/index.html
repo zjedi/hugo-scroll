@@ -50,9 +50,19 @@
 <main class="content" role="main">
     <!-- Render sticky left navigation menu -->
     <div class='fixed-nav'>
+        {{ if eq .Params.nav_to_top_weight "first" }}
+            {{ $fnav_title := "Start" }}{{ with .Params.nav_to_top_title }}{{ $fnav_title = . }}{{ end }}
+            <a class='fn-item' item_index='{{ 0 }}' href='/#site-head'>{{ $fnav_title | safeHTML }}</a>
+        {{ end }}
+        {{ $last_index_val := 0 }}
         {{ range $index_val, $elem_val := $content }}
             {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
             <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize $fnav_title }}'>{{ $fnav_title | safeHTML }}</a>
+            {{ $last_index_val = $index_val }}
+        {{ end }}
+        {{ if eq .Params.nav_to_top_weight "last" }}
+            {{ $fnav_title := "Start" }}{{ with .Params.nav_to_top_title }}{{ $fnav_title = . }}{{ end }}
+            <a class='fn-item' item_index='{{ (add $last_index_val 2) }}' href='/#site-head'>{{ $fnav_title | safeHTML }}</a>
         {{ end }}
     </div>
 
