@@ -88,8 +88,11 @@ var $sitehead = $("#site-head");
       });
     }
 
-    $('ul').addClass("fa-ul");
-    $("ul li").prepend('<span class="fa-li"><i class="fa fa-asterisk"></i></span>');
+    var ulLiIcon = getComputedStyle(document.documentElement).getPropertyValue('--ul-li-icon');
+    if (ulLiIcon.length > 0) {
+      $('ul').addClass("fa-ul");
+      $("ul li").prepend('<span class="fa-li"><i class="fa ' + ulLiIcon + '"></i></span>');
+    }
     $("blockquote p").prepend('<span class="quo fa fa-quote-left"></span>');
     $("blockquote p").append('<span class="quo fa fa-quote-right"></span>');
   });
