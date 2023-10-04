@@ -88,10 +88,10 @@ var $sitehead = $("#site-head");
       });
     }
 
-    var listElement = getComputedStyle(document.documentElement).getPropertyValue('--listElement');
-    if (listElement.length > 0) {
+    var ul-li-icon = getComputedStyle(document.documentElement).getPropertyValue('--ul-li-icon');
+    if (ul-li-icon.length > 0) {
       $('ul').addClass("fa-ul");
-      $("ul li").prepend('<span class="fa-li"><i class="fa ' + listElement + '"></i></span>');
+      $("ul li").prepend('<span class="fa-li"><i class="fa ' + ul-li-icon + '"></i></span>');
     }
     $("blockquote p").prepend('<span class="quo fa fa-quote-left"></span>');
     $("blockquote p").append('<span class="quo fa fa-quote-right"></span>');
