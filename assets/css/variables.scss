@@ -41,4 +41,8 @@
     /* === Footer === */
     --footer-color-background: #22343a;
     --footer-color: #bbc7cc;
+
+    /* === Lists === */
+    /* define list element for unnumbered lists, leave empty for default list element */
+    --ul-li-icon: fa-asterisk;
 }
