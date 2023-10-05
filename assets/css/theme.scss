@@ -220,12 +220,18 @@ a.fn-item {
 
   background-color: var(--single-page-bg-color);
   color: var(--single-page-text-color);
+  // to remove the white space after the footer on pages shorter
+  // than actually would fit into the browser window
+  min-height: calc(100vh - 2em);
 
   // Tweak the .post wrapper style
   .post {
     margin-top: 0;
     border-bottom: none;
     padding-bottom: 0;
+    // fix by https://github.com/ffrank
+    // to account for the margin of content elements
+    padding-bottom: 1em;
   }
 
   // Kill that stylish little circle that was on the border
