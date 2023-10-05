@@ -36,7 +36,7 @@
               {{ if isset .Params "external" }}
                  <a class='btn site-menu' href='{{ .Params.external }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
               {{ else if isset .Params "internal" }}
-                 <a class='btn site-menu' href='{{ .Params.internal }}'>{{ $button_title }}&nbsp;</a>
+                 <a class='btn site-menu' href='{{ .Params.internal }}'>{{ $button_title }}</a>
               {{ else }}
                 {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
