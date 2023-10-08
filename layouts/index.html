@@ -2,8 +2,7 @@
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
-{{ $content := where $sections "Params.external" "==" nil }}
-{{ $content := where $sections "Params.internal_hide" "ne" true }}
+{{ $content := where (where $sections "Params.external" "==" nil) "Params.internal_hide" "ne" true }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
