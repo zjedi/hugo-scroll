@@ -10,15 +10,42 @@ header_menu: true
 
 #### Full Size
 
+##### self-rendered by own function
 ![Jane Doe](images/happy-ethnic-woman_2000x2000_transparent.png)
+
+##### rendered by figure
+{{< figure src="images/happy-ethnic-woman_2000x2000_transparent.png">}}
+
+---
 
 #### 60% Size
 
+##### self-rendered by own function
 ![Jane Doe](images/happy-ethnic-woman_2000x2000_transparent.png "60%")
+
+##### rendered by figure
+{{< figure src="images/happy-ethnic-woman_2000x2000_transparent.png" width="60%">}}
+
+---
 
 #### 20% Size
 
+##### self-rendered by own function
 ![Jane Doe](images/happy-ethnic-woman_2000x2000_transparent.png "20%")
+
+##### rendered by figure
+{{< figure src="images/happy-ethnic-woman_2000x2000_transparent.png" width="20%">}}
+
+
+---
+
+#### adjusted Size 60% - 70%
+
+##### self-rendered by own function (60%)
+![Jane Doe](images/happy-ethnic-woman_2000x2000_transparent.png "60%")
+
+##### rendered by figure (70%)
+{{< figure src="images/happy-ethnic-woman_2000x2000_transparent.png" width="70%">}}
 
 
 #### Lorem ipsum
