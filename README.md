@@ -25,6 +25,7 @@ into single file)
 - git info in footer (opt-in)
 
 ## 🔑 Installation
+You need to install Hugo extended version.
 If you already have a Hugo site on your machine, you can simply add this theme via
 ```
 git submodule add https://github.com/zjedi/hugo-scroll.git themes/hugo-scroll
