@@ -21,7 +21,7 @@
         {{ end }}
 
         <div id="site-head-content" class="inner">
-            {{ with .Params.header_logo }}<img id="blog-logo" src="{{ . }}" />{{ end }}
+            {{ with .Params.header_logo }}<img id="blog-logo" alt="Logo" src="{{ . }}" />{{ end }}
 
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
