@@ -51,6 +51,10 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     # The sections of the home page alternate styling. Mark invert as true to swap the styling of the sections
     invertSectionColors = false
     
+    [params.footer]
+    # Show contact icons for email/phone (if specified) in the footer of the page
+    showContactIcons = false
+
     [params.meta]
         keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
 

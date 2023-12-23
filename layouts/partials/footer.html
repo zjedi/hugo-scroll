@@ -1,5 +1,16 @@
 <footer class="site-footer">
   <div class="inner">
+    {{ if ne .Site.Params.footer.showContactIcons false }}
+      {{ with .Site.Params.contact }}
+      <section class="icons">
+        <ol>
+          <li><a href="mailto:{{ .email }}" aria-label='{{ i18n "email" }}'><i class="fa fa-envelope"></i></a></li>
+          <li><a href="tel:{{ .phone }}" aria-label='{{ i18n "phone" }}'><i class="fa fa-phone"></i></a></li>
+        </ol>
+      </section>
+      {{ end }}
+    {{ end }}
+
     {{ with .Site.Params.copyright }}
       <section class="copyright">{{ . | safeHTML }}</section>
     {{ end }}
