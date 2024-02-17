@@ -1,5 +1,22 @@
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
+
 <footer class="site-footer">
   <div class="inner">
+    {{ if ne .Site.Params.footer.showFooterLinks false }}
+    <section class="links">
+      <ol>
+      {{ range where $sections ".Params.footer_menu" "eq" true }}
+        <li>
+          <a href="{{ .Params.detailed_page_path }}">{{ .Params.footer_menu_title }}</a>
+        </li>
+      {{ end }}
+      </ol>
+    </section>
+    <hr />
+    {{ end }}
+
     {{ if ne .Site.Params.footer.showContactIcons false }}
       {{ with .Site.Params.contact }}
       <section class="icons">
