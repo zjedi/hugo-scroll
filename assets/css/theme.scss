@@ -274,7 +274,7 @@ a.fn-item {
   color: var(--sticky-menu-text-color);
 }
 
-/* Bottom Icons */
+/* Footer Icons */
 .icons {
   ol {
     padding-left: 0;
@@ -282,5 +282,20 @@ a.fn-item {
 
   li {
     display: inline-block;
+  }
+}
+
+/* Footer Links */
+.site-footer .links {
+  text-align: center;
+
+  ol {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  li {
+    margin-left: unset;
   }
 }

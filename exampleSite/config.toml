@@ -55,6 +55,9 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     # Show contact icons for email/phone (if specified) in the footer of the page
     showContactIcons = false
 
+    # Show links indicated with footer_menu and footer_menu_title in the footer of the page
+    showFooterLinks = false
+
     [params.meta]
         keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
 
