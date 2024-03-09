@@ -18,14 +18,15 @@
     {{ end }}
 
     {{ if ne .Site.Params.footer.showContactIcons false }}
-      {{ with .Site.Params.contact }}
       <section class="icons">
         <ol>
-          <li><a href="mailto:{{ .email }}" aria-label='{{ i18n "email" }}'><i class="fa fa-envelope"></i></a></li>
-          <li><a href="tel:{{ .phone }}" aria-label='{{ i18n "phone" }}'><i class="fa fa-phone"></i></a></li>
+          {{ range .Site.Params.contacts }}
+            <li>
+              <a href="{{ .url }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
+            </li>
+          {{ end }}
         </ol>
       </section>
-      {{ end }}
     {{ end }}
 
     {{ with .Site.Params.copyright }}

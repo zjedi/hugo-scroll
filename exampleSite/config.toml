@@ -61,6 +61,14 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     [params.meta]
         keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
 
-    [params.contact]
-        email = "mail@janedoe.com"
-        phone = "+49 1111 555555"
+    [[params.contacts]]
+        label = "phone"
+        value = "+49 1111 555555"
+        url = "tel: +49 1111 555555"
+        icon = "fa fa-phone"
+
+    [[params.contacts]]
+        label = "email"
+        value = "mail@janedoe.com"
+        url = "mailto: mail@janedoe.com"
+        icon = "fa fa-envelope"
