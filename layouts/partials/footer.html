@@ -19,13 +19,9 @@
 
     {{ if ne .Site.Params.footer.showContactIcons false }}
       <section class="icons">
-        <ol>
-          {{ range .Site.Params.contacts }}
-            <li>
-              <a href="{{ .url }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
-            </li>
-          {{ end }}
-        </ol>
+        {{ range .Site.Params.contacts }}
+          <a href="{{ .url }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
+        {{ end }}
       </section>
     {{ end }}
 
