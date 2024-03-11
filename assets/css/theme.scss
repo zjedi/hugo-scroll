@@ -276,13 +276,10 @@ a.fn-item {
 
 /* Footer Icons */
 .icons {
-  ol {
-    padding-left: 0;
-  }
-
-  li {
-    display: inline-block;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 8px;
 }
 
 /* Footer Links */
