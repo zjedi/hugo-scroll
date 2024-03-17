@@ -6,7 +6,7 @@
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{ . | relURL}})"{{ end }}>
 {{ else }}
 <header id="site-head">
 {{ end }}
@@ -33,9 +33,9 @@
               {{ with .Params.header_menu_title }}{{ $button_title = . }}{{ end }}
 
               {{ if isset .Params "external" }}
-                 <a class='btn site-menu' href='{{ .Params.external }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
+                 <a class='btn site-menu' href='{{ .Params.external | absURL }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
               {{ else if isset .Params "detailed_page_path" }}
-                 <a class='btn site-menu' href='{{ .Params.detailed_page_path }}'>{{ $button_title }}</a>
+                 <a class='btn site-menu' href='{{ .Params.detailed_page_path | relURL }}'>{{ $button_title }}</a>
               {{ else }}
                 {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
