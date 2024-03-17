@@ -64,11 +64,18 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     [[params.contacts]]
         label = "phone"
         value = "+49 1111 555555"
-        url = "tel: +49 1111 555555"
+        url = "tel:+49 1111 555555"
         icon = "fa fa-phone"
 
     [[params.contacts]]
         label = "email"
         value = "mail@janedoe.com"
-        url = "mailto: mail@janedoe.com"
+        url = "mailto:mail@janedoe.com"
         icon = "fa fa-envelope"
+
+    # Add additional contacts here!
+    # [[params.contacts]]
+    #     label = ""
+    #     value = ""
+    #     url = ""
+    #     icon = ""

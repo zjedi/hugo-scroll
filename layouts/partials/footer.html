@@ -20,7 +20,7 @@
     {{ if ne .Site.Params.footer.showContactIcons false }}
       <section class="icons">
         {{ range .Site.Params.contacts }}
-          <a href="{{ .url }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
+          <a href="{{ .url | safeURL }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
         {{ end }}
       </section>
     {{ end }}
