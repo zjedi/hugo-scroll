@@ -9,7 +9,7 @@
       <ol>
       {{ range where $sections ".Params.footer_menu" "eq" true }}
         <li>
-          <a href="{{ .Params.detailed_page_path }}">{{ .Params.footer_menu_title }}</a>
+          <a href="{{ relLangURL .Params.detailed_page_path }}">{{ .Params.footer_menu_title }}</a>
         </li>
       {{ end }}
       </ol>
