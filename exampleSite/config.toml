@@ -94,7 +94,6 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     languageName = "English"
 
   [languages.de]
-    title = 'ConnRAD Projekt'
     title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
     weight = 20
     contentDir = "content/de"
