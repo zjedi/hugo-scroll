@@ -45,7 +45,7 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
     # Show also a language menu item for the current language, if false only
     # show the remaining languages
-    show_current_lang = false
+    show_current_lang = true
 
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
@@ -92,6 +92,7 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
   [languages.en]
     weight = 10
     languageName = "English"
+    contentDir = "content/en"
 
   [languages.de]
     title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
