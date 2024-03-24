@@ -21,8 +21,27 @@
             {{- partial "custom_header_video.html" . -}}
         {{ end }}
 
+	{{ $num_lang := len $languages }}
+	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
+	<div id="site-languages" class="inner">
+	{{ range $languages }}
+	    {{ $lang_title := . | strings.ToUpper }}
+	    {{ if .LanguageName }}{{ $lang_title = .LanguageName }}{{ end }}
+
+	    {{ if eq .Lang $.Lang }}
+		{{ if $.Site.Params.show_current_lang }}
+		<span class='btn-lang active'>{{ $lang_title }}</span>
+		{{ end }}
+		{{ continue }}
+	    {{ end }}
+
+	    <a class='btn-lang' href='{{ . | relURL }}'>{{ $lang_title }}</a>
+	{{ end }}
+	</div>
+	{{ end }}
+
         <div id="site-head-content" class="inner">
-            {{ with .Params.header_logo }}<img id="blog-logo" alt="Logo" src="{{ . | relURL }}" />{{ end }}
+	    {{ with resources.Get .Params.header_logo }}<img id="blog-logo" alt="" src="{{ .RelPermalink }}" />{{ end }}
 
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
@@ -42,23 +61,6 @@
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
               {{ end }}
             {{ end }}
-
-	    {{ if $.Site.Params.language_menu }}
-	    <div id="site-head-languages" class="inner">
-	    {{ range $languages }}
-		{{ $selected := "" }}
-		{{ if eq .Lang $.Lang }}
-		    {{ if not $.Site.Params.show_current_lang }}
-			{{ continue }}
-		    {{ end }}
-		    {{ $selected = "selected" }}
-		{{ end }}
-		{{ $lang_title := . | strings.ToUpper }}
-		{{ if .LanguageName }}{{ $lang_title = .LanguageName }}{{ end }}
-		<a class='btn site-menu {{ $selected }}' href='{{ . | relURL }}'>{{ $lang_title }}</a>
-	    {{ end }}
-	    </div>
-	    {{ end }}
 
             {{ with (index $content 0) }}
                 {{ $first_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $first_title = . }}{{ end }}
