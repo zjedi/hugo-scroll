@@ -7,14 +7,12 @@
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-{{- $img := resources.Get .Params.header_image -}}
-{{- $sizes := slice 1280 1024 600 360 -}}
-{{ with $img }}
+{{ with $img := resources.Get .Params.header_image }}
 <style>
 #site-head.withCenteredImage {
   background-image: url('{{- $img.RelPermalink -}}'); /* Default for larger screens */
 }
-{{ range $size := $sizes }}
+{{ range $size := slice 1280 1024 600 360 }}
 {{- with $img.Filter ( images.Process ( printf "resize %dx" $size ) ) -}}
 @media (max-width: {{- printf "%dpx" $size -}}) {
   #site-head.withCenteredImage { background-image: url('{{- .RelPermalink -}}'); }
