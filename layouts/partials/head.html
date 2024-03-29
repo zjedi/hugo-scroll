@@ -3,9 +3,8 @@
 
 <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
-{{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ . | absURL }}" type="image/png"
-/>{{ end }}
+{{ with resources.Get .Site.Params.favicon }}
+  <link rel="shortcut icon" href="{{ .Permalink }}" type="{{ .MediaType.Type }}" />{{ end }}
 
 {{ with .Site.Params.description }}
   <meta name="description" content="{{ . }}"
