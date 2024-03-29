@@ -7,7 +7,7 @@
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{ . | relURL}})"{{ end }}>
+<header id="site-head" class="withCenteredImage" {{ with resources.Get .Params.header_image }}style="background-image: url({{ .RelPermalink }})"{{ end }}>
 {{ else }}
 <header id="site-head">
 {{ end }}
