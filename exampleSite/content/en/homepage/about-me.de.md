@@ -21,8 +21,8 @@ Images from static location can't be pipeline-processed and are always copied wh
 #### Assets
 Latest Hugo version supports injection from `assets` via natural Markdown notation, which empowers this approach for injecting images since pipeline processing (resizing etc) can be used. However, It only worked for me with the local test deployment, there were issues while deploying previews Netlify. Possible workaround would be to use custom shortcode to "touch" the image via [Resources.GetMatch](https://gohugo.io/functions/resources/getmatch/). I hope this gets fixed someday.
 
-![Jane Doe](images/asset-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
-Historically, Linking image from `assets` folder worked only via Hugo-specific shortcode, there was [a discussion with suggestions](https://discourse.gohugo.io/t/how-to-show-images-on-post-pages-if-theyre-located-in-the-assets-folder/34276/14) - but such workaround is no longer needed.
+![Broken image from assets](images/asset-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
+Historically, Linking image from `assets` folder worked only via Hugo-specific shortcode, there was [a discussion with suggestions](https://discourse.gohugo.io/t/how-to-show-images-on-post-pages-if-theyre-located-in-the-assets-folder/34276/14).
 
 Note that using images form assets folder is the only way to apply pipeline processing, such as resizing, when building the site. Fore more details, read about [asset vs static difference](https://discourse.gohugo.io/t/difference-between-asset-and-static-folder/41203)
 
