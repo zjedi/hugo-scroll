@@ -4,6 +4,8 @@ weight: 3
 header_menu: true
 ---
 
+<figure src="asset-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg" alt="Image loaded from Assets">
+
 ![Jane Doe](/images/asset-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
 See DE language for more examples of image management. There are multiple approaches.
 

@@ -1,0 +1,7 @@
+{{ with resources.Get "images/apple-touch-icon.png" }}<img src="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+
+{{ with .Resources.GetMatch "sunset.jpg" }}
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+{{ end }}
+
+{{ with .Get "text" }}{{ . }}</a>{{ end }}
