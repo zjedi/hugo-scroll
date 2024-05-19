@@ -99,9 +99,3 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     weight = 20
     contentDir = "content/de"
     languageName = "Deutsch"
-
-  [languages.fr]
-    disabled = true
-    title = "Uhlala - scandal, i'm missing a translation"
-    weight = 15
-    contentDir = "content/fr"
