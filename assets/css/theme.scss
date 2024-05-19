@@ -68,10 +68,9 @@ body {
 
   #site-languages {
     text-align: right;
-    margin-bottom: 3rem;
   }
 
-  .btn-lang {
+  #site-languages .btn-lang {
     text-decoration: none;
     background-color: var(--highlight);
     color: var(--highlight-contrast);
@@ -82,7 +81,6 @@ body {
     margin: 0 0 0 0.7rem;
     padding: 0.3rem 0.7rem;
     position: relative;
-    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 
     &.active,
@@ -93,6 +91,10 @@ body {
   }
 
   // Landing screen menu
+  a.btn, #site-languages .btn-lang {
+    font-family: "Oswald", sans-serif;
+  }
+
   a.btn {
     text-decoration: none;
     background-color: var(--highlight);
@@ -108,7 +110,6 @@ body {
     position: relative;
     margin-top: 2rem;
     cursor: pointer;
-    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
 
