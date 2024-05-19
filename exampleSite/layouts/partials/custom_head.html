@@ -38,21 +38,8 @@
 <!-- Custom link-tags for different icons
      Generated via https://favicon.io/favicon-generator/ -->
 
+{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
+{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
+<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}
 
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="{{ "images/apple-touch-icon.png" | absURL }}"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="{{ "images/favicon-32x32.png" | absURL }}"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="{{ "images/favicon-16x16.png" | absURL }}"
-/>

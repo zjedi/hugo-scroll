@@ -3,10 +3,25 @@
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 {{ $content := where (where $sections "Params.external" "==" nil) "Params.detailed_page_homepage_content" "ne" false }}
+{{ $languages := .Site.Languages }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{ . | relURL}})"{{ end }}>
+{{ with $img := resources.Get .Params.header_image }}
+<style>
+#site-head.withCenteredImage {
+  background-image: url('{{- $img.RelPermalink -}}'); /* Default for larger screens */
+}
+{{ range $size := slice 1280 1024 900 600 360 }}
+{{- with $img.Resize ( printf "%dx lanczos webp photo q100" $size ) -}}
+@media (max-width: {{- printf "%dpx" $size -}}) {
+  #site-head.withCenteredImage { background-image: url('{{- .RelPermalink -}}'); }
+}
+{{ end }}
+{{- end -}}
+</style>
+{{ end }}
+<header id="site-head" class="withCenteredImage">
 {{ else }}
 <header id="site-head">
 {{ end }}
@@ -20,8 +35,27 @@
             {{- partial "custom_header_video.html" . -}}
         {{ end }}
 
+	{{ $num_lang := len $languages }}
+	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
+	<div id="site-languages" class="inner">
+	{{ range $languages }}
+	    {{ $lang_title := . | strings.ToUpper }}
+	    {{ if .LanguageName }}{{ $lang_title = .LanguageName }}{{ end }}
+
+	    {{ if eq .Lang $.Lang }}
+		{{ if $.Site.Params.show_current_lang }}
+		<span class='btn-lang active'>{{ $lang_title }}</span>
+		{{ end }}
+		{{ continue }}
+	    {{ end }}
+
+	    <a class='btn-lang' href='{{ . | relURL }}'>{{ $lang_title }}</a>
+	{{ end }}
+	</div>
+	{{ end }}
+
         <div id="site-head-content" class="inner">
-            {{ with .Params.header_logo }}<img id="blog-logo" alt="Logo" src="{{ . }}" />{{ end }}
+	    {{ with resources.Get .Params.header_logo }}<img id="blog-logo" alt="" src="{{ .RelPermalink }}" />{{ end }}
 
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
@@ -41,6 +75,7 @@
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
               {{ end }}
             {{ end }}
+
             {{ with (index $content 0) }}
                 {{ $first_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $first_title = . }}{{ end }}
                 <a id='header-arrow' href="#{{- anchorize $first_title -}}" aria-label="Go to first section"><i class="fa fa-angle-down"></i></a>

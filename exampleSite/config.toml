@@ -40,6 +40,13 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     # The "description" of your website. This is used in the meta data of your generated html.
     description = "Nutrition Coach & Chef Consultant"
 
+    # Show a menu of languages available
+    language_menu = true
+
+    # Show also a language menu item for the current language, if false only
+    # show the remaining languages
+    show_current_lang = true
+
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
     copyright = "© Jane Doe"
@@ -79,3 +86,16 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
     #     value = ""
     #     url = ""
     #     icon = ""
+
+# Define additіonal languages
+[languages]
+  [languages.en]
+    weight = 10
+    languageName = "English"
+    contentDir = "content/en"
+
+  [languages.de]
+    title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
+    weight = 20
+    contentDir = "content/de"
+    languageName = "Deutsch"

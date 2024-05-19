@@ -66,7 +66,35 @@ body {
     text-shadow: var(--cover-title-text-shadow);
   }
 
+  #site-languages {
+    text-align: right;
+  }
+
+  #site-languages .btn-lang {
+    text-decoration: none;
+    background-color: var(--highlight);
+    color: var(--highlight-contrast);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    font-size: 70%;
+    margin: 0 0 0 0.7rem;
+    padding: 0.3rem 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+
+    &.active,
+    &:hover {
+      color: var(--highlight-inverse-contrast);
+      background-color: var(--highlight-inverse);
+    }
+  }
+
   // Landing screen menu
+  a.btn, #site-languages .btn-lang {
+    font-family: "Oswald", sans-serif;
+  }
+
   a.btn {
     text-decoration: none;
     background-color: var(--highlight);
@@ -82,7 +110,6 @@ body {
     position: relative;
     margin-top: 2rem;
     cursor: pointer;
-    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
 
