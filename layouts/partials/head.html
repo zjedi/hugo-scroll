@@ -4,7 +4,7 @@
 <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
 {{ with resources.Get .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ .Permalink }}" type="{{ .MediaType.Type }}" />{{ end }}
+  <link rel="shortcut icon" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}" />{{ end }}
 
 {{ with .Site.Params.description }}
   <meta name="description" content="{{ . }}"
@@ -26,7 +26,7 @@
 {{ $stylesheetScreen := ( resources.Get "css/_index.scss" | resources.ToCSS ) }}
 
 {{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetGeneric $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $stylesheet.Permalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
+<link rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
