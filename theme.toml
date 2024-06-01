@@ -24,7 +24,7 @@ tags = [
   "theme"
 ]
 features = ["cover-image", "favicon", "header-menu", "auto-scroll"]
-min_version = "0.111.2"
+min_version = "0.124.0"
 
 authors = [
   {name = "Jan Raasch", homepage = "https://www.janraasch.com"},

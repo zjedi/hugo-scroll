@@ -49,7 +49,11 @@
 		{{ continue }}
 	    {{ end }}
 
+        {{ if hugo.IsMultihost }}
+	    <a class='btn-lang' href='{{ urls.AbsLangURL "" }}'>{{ $lang_title }}</a>
+        {{ else }}
 	    <a class='btn-lang' href='{{ . | relURL }}'>{{ $lang_title }}</a>
+        {{ end }}
 	{{ end }}
 	</div>
 	{{ end }}
