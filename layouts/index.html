@@ -38,23 +38,16 @@
 	{{ $num_lang := len $languages }}
 	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
 	<div id="site-languages" class="inner">
-	{{ range $languages }}
-	    {{ $lang_title := . | strings.ToUpper }}
-	    {{ if .LanguageName }}{{ $lang_title = .LanguageName }}{{ end }}
-
-	    {{ if eq .Lang $.Lang }}
-		{{ if $.Site.Params.show_current_lang }}
-		<span class='btn-lang active'>{{ $lang_title }}</span>
-		{{ end }}
-		{{ continue }}
-	    {{ end }}
-
-        {{ if hugo.IsMultihost }}
-	    <a class='btn-lang' href='{{ urls.AbsLangURL "" }}'>{{ $lang_title }}</a>
-        {{ else }}
-	    <a class='btn-lang' href='{{ . | relURL }}'>{{ $lang_title }}</a>
+    {{ range site.Sites }}
+      {{ $lang_title := or .Language.LanguageName (.Language.Lang | strings.ToUpper) }}
+      {{ if eq . $.Site }}
+        {{ if $.Site.Params.show_current_lang }}
+          <span class='btn-lang active'>{{ $lang_title }}</span>
         {{ end }}
-	{{ end }}
+      {{ else }}
+        <a class='btn-lang' href='{{ .Home.Permalink }}'>{{ $lang_title }}</a>
+      {{ end }}
+    {{ end }}
 	</div>
 	{{ end }}
 
