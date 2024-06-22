@@ -14,6 +14,9 @@ title = "Jane Doe - Nutrition Coach & Chef Consultant"
 # In order to add version information in the page's footer set to true.
 # enableGitInfo = true
 
+# enable emoji processing in Markdown (valid only for pure markdown content)
+enableEmoji = true
+
 # Theme-specific variables `.Site.Params.myParamName`
 [params]
 

@@ -38,19 +38,16 @@
 	{{ $num_lang := len $languages }}
 	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
 	<div id="site-languages" class="inner">
-	{{ range $languages }}
-	    {{ $lang_title := . | strings.ToUpper }}
-	    {{ if .LanguageName }}{{ $lang_title = .LanguageName }}{{ end }}
-
-	    {{ if eq .Lang $.Lang }}
-		{{ if $.Site.Params.show_current_lang }}
-		<span class='btn-lang active'>{{ $lang_title }}</span>
-		{{ end }}
-		{{ continue }}
-	    {{ end }}
-
-	    <a class='btn-lang' href='{{ . | relURL }}'>{{ $lang_title }}</a>
-	{{ end }}
+    {{ range site.Sites }}
+      {{ $lang_title := or .Language.LanguageName (.Language.Lang | strings.ToUpper) }}
+      {{ if eq . $.Site }}
+        {{ if $.Site.Params.show_current_lang }}
+          <span class='btn-lang active'>{{ $lang_title }}</span>
+        {{ end }}
+      {{ else }}
+        <a class='btn-lang' href='{{ .Home.Permalink }}'>{{ $lang_title }}</a>
+      {{ end }}
+    {{ end }}
 	</div>
 	{{ end }}
 
@@ -110,7 +107,7 @@
         <div class='post-holder{{ if and (ne .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq .Site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
             <article id='{{ anchorize $fnav_title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $content) }}last{{ end }}'>
                 <header class="post-header">
-                    <h2 class="post-title">{{ .Title | safeHTML }}</h2>
+                    <h2 class="post-title">{{ .Title | emojify | safeHTML }}</h2>
                 </header>
                 <section class="post-content">
                     {{ .Content }}
