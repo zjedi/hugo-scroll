@@ -1,9 +1,9 @@
 {{ define "main" }}
-{{ $headless := .Site.GetPage "/homepage" }}
+{{ $headless := .GetPage "./homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 {{ $content := where (where $sections "Params.external" "==" nil) "Params.detailed_page_homepage_content" "ne" false }}
-{{ $languages := .Site.Languages }}
+{{ $translations := .Page.AllTranslations }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
@@ -35,17 +35,17 @@
             {{- partial "custom_header_video.html" . -}}
         {{ end }}
 
-	{{ $num_lang := len $languages }}
+	{{ $num_lang := len $translations }}
 	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
 	<div id="site-languages" class="inner">
-    {{ range site.Sites }}
-      {{ $lang_title := or .Language.LanguageName (.Language.Lang | strings.ToUpper) }}
-      {{ if eq . $.Site }}
+    {{ range $translations }}
+      {{ $lang_title := or .Language.LanguageName (.Lang | strings.ToUpper) }}
+      {{ if eq .Lang $.Lang }}
         {{ if $.Site.Params.show_current_lang }}
           <span class='btn-lang active'>{{ $lang_title }}</span>
         {{ end }}
       {{ else }}
-        <a class='btn-lang' href='{{ .Home.Permalink }}'>{{ $lang_title }}</a>
+        <a class='btn-lang' href='{{ .RelPermalink }}'>{{ $lang_title }}</a>
       {{ end }}
     {{ end }}
 	</div>
