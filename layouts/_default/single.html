@@ -2,7 +2,9 @@
   <main class="content page-template page-{{ .Slug }}">
     <article class="post page">
       <header class="post-header">
-        <a id="back-to-main-page" href="{{ "" | relLangURL }}"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ .Site.Title }}</a>
+        {{ with .Parent }}
+        <a id="back-to-main-page" href="{{ .RelPermalink | relLangURL }}"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ or .Title .Site.Title }}</a>
+        {{ end }}
       </header>
       <h1 class="post-title">{{ .Title }}</h1>
       <section class="post-content">
