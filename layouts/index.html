@@ -64,7 +64,7 @@
               {{ with .Params.header_menu_title }}{{ $button_title = . }}{{ end }}
 
               {{ if isset .Params "external" }}
-                 <a class='btn site-menu' href='{{ .Params.external | absURL }}'>{{ $button_title }}&nbsp;<icon class="fa fa-external-link"></icon></a>
+                 <a class='btn site-menu' href='{{ .Params.external | absURL }}'>{{ $button_title }}&nbsp;<i class="fa fa-external-link"></i></a>
               {{ else if isset .Params "detailed_page_path" }}
                  <a class='btn site-menu' href='{{ .Params.detailed_page_path | relURL }}'>{{ $button_title }}</a>
               {{ else }}
