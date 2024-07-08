@@ -1,15 +1,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+{{ with or .Title .Site.Title | plainify }}
+<title>{{ . }}</title>
+{{ end }}
 
 {{ with resources.Get .Site.Params.favicon }}
   <link rel="shortcut icon" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}" />{{ end }}
 
-{{ with .Site.Params.description }}
+{{ with or .Description .Site.Params.description | plainify }}
   <meta name="description" content="{{ . }}"
 />{{ end }}
-{{ with .Site.Params.meta.keywords }}
+{{ with or (delimit .Keywords ", ") .Site.Params.meta.keywords }}
   <meta name="keywords" content="{{ . }}"
 />{{ end }}
 <meta name="referrer" content="no-referrer-when-downgrade" />
