@@ -7,20 +7,45 @@
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-{{ with $img := resources.Get .Params.header_image }}
-<style>
-#site-head.withCenteredImage {
-  background-image: url('{{- $img.RelPermalink -}}'); /* Default for larger screens */
-}
-{{ range $size := slice 1280 1024 900 600 360 }}
-{{- with $img.Resize ( printf "%dx lanczos webp photo q100" $size ) -}}
-@media (max-width: {{- printf "%dpx" $size -}}) {
-  #site-head.withCenteredImage { background-image: url('{{- .RelPermalink -}}'); }
-}
-{{ end }}
-{{- end -}}
-</style>
-{{ end }}
+  {{ with $img := resources.Get .Params.header_image }}
+  {{ $image_options := $.Site.Params.image_options | default "webp q90 lanczos photo" -}}
+  <style>
+  /* Default cover for larger screens, converted to webp */
+  {{- with $img.Resize ( printf "%dx%d %s" $img.Width $img.Height $image_options ) -}}
+  #site-head.withCenteredImage {
+    background-image: url('{{- .RelPermalink -}}');
+  }  
+  {{- end -}}
+
+  /*
+  Lower resolutions, uncropped. Aimed at desktop users.
+  We set __both__ max-width and max-height to make sure the image is never upscaled.
+  */
+  {{ range $width := slice 1920 1600 1366 }}
+    {{- with $img.Resize ( printf "%dx %s" $width $image_options ) }}
+    @media (max-width: {{- .Width -}}px) and (max-height: {{- .Height -}}px) {
+      #site-head.withCenteredImage { background-image: url('{{- .RelPermalink -}}'); }
+    }
+    {{- end }}
+  {{- end }}
+
+  /*
+  Lower resolutions, cropped to portrait. Useful for mobile. For "tall" displays (screen ratio < image ratio)
+  the "cover" algorithm first resizes the image to match the screen height, then __crops__ it to match the width.
+  We mimic this by resizing to height=1024, and then cropping to various widths. We set "max-height" to
+  ensure the height is never upscaled, but also max-aspect-ratio to ensure that each image is used in "tall-enough"
+  displays, in which our cropping would happen anyways!
+  */
+  {{- $img_temp := $img.Resize "x1024 q100" -}}/* high quality temporary image, to be cropped later */
+  {{ range $width := slice 900 600 360 }}
+    {{- with $img_temp.Crop ( printf "%dx1024 center %s" $width $image_options ) }}
+    @media (max-height: {{- .Height -}}px) and (max-aspect-ratio: {{ .Width }} / {{ .Height }}) {
+      #site-head.withCenteredImage { background-image: url('{{- .RelPermalink -}}'); }
+    }
+    {{- end }}
+  {{- end }}
+  </style>
+  {{ end }}
 <header id="site-head" class="withCenteredImage">
 {{ else }}
 <header id="site-head">
