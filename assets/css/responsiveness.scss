@@ -58,6 +58,11 @@
     line-height: 1.6em;
   }
 
+  /* skip the top menu when scrolling */
+  .post-holder .post {
+      scroll-margin-top: 48px;
+  }
+
   .post-template .post {
     padding-bottom: 1rem;
   }
