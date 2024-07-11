@@ -93,7 +93,7 @@ enableEmoji = true
     #     url = ""
     #     icon = ""
 
-# Define additіonal languages
+# Define additional languages
 [languages]
   [languages.en]
     weight = 10
