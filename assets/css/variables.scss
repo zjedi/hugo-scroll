@@ -5,7 +5,7 @@
     /* Used for Landing screen menu buttons, but potentially usable for highlighting other things */
     --highlight: #86c440;
     --highlight-contrast: var(--cover-text-color);
-    /*iverse colors used for :hover */
+    /*inverse colors used for :hover */
     --highlight-inverse: var(--cover-text-color);
     --highlight-inverse-contrast: white;
 
@@ -29,7 +29,7 @@
     /* Dark section - background color */
     --section-dark-bg-color: #b80135;
 
-    /* Light&Dark section >quote. Supressive color, compared to 'Light section - text color'*/
+    /* Light&Dark section >quote. Suppressive color, compared to 'Light section - text color'*/
     --section-uni-quote: grey;
     /* Light&Dark section `code` a bit darker than 'Light section - background color' */
     --section-uni-code-bg-color: #e0ded7;

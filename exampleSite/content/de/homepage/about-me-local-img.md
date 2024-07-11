@@ -9,10 +9,12 @@ This demonstates localized content placed in dedicated language folder, `content
 See i18n configuration in `[languages]` section of `config.toml`.
 
 #### Local content
+
 Localised content can be put in dedicated folder `content/de/`. Images should be naturally found from there:
 ![Image from content/de ](de-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
 
 #### Assets
+
 Images in assets folder can be localised, conventionally by adding `.de` suffix. However, assets may be tricky, see next section for details
 ![Broken DE Image from assets](images/asset-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.de.jpg)
 
