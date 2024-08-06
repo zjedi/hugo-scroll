@@ -34,7 +34,7 @@ If you already have a Hugo site on your machine, you can simply add this theme v
 git submodule add https://github.com/zjedi/hugo-scroll.git themes/hugo-scroll
 ```
 
-Then, adjust the `config.toml` as detailed below & in the file comments.
+Then, adjust the `hugo.toml` as detailed below & in the file comments.
 
 ### Playing around with our example site
 
@@ -50,7 +50,7 @@ For more information, read the official [Hugo setup guide][hugo-setup-guide].
 
 If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
 
-Please check out the [config.toml](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/config.toml) included in the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
+Please check out the [hugo.toml](https://github.com/zjedi/hugo-scroll/blob/master/exampleSite/hugo.toml) included in the [exampleSite](https://github.com/zjedi/hugo-scroll/tree/master/exampleSite) of this theme.
 
 You can add **a new section to the homepage** by running `hugo new homepage/my-new-content.md` (or craft the file manually)
 
@@ -91,7 +91,7 @@ Set `header_use_video: true` in `/exampleSite/content/_index.md` and define vide
 
 ### Footer version information
 
-In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your config.toml: `enableGitInfo = true`
+In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your hugo.toml: `enableGitInfo = true`
 
 ### External links
 
