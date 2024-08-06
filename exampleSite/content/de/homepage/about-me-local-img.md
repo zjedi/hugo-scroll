@@ -6,7 +6,7 @@ header_menu: true
 
 This demonstates localized content placed in dedicated language folder, `content/de`. This way you won't have to use localization suffix with the `.md` file. Both localisation approaches (separate folder, suffixes in the same folder) can be used and even mixed.
 
-See i18n configuration in `[languages]` section of `config.toml`.
+See i18n configuration in `[languages]` section of `hugo.toml`.
 
 #### Local content
 
