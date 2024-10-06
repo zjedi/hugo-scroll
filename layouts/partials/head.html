@@ -1,8 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+{{ if and site.Params.combine_page_and_site_title .Title .Site.Title }}
+<title>{{ .Title | plainify }} | {{ .Site.Title | plainify }}</title>
+{{ else }}
 {{ with or .Title .Site.Title | plainify }}
 <title>{{ . }}</title>
+{{ end }}
 {{ end }}
 
 {{ with resources.Get .Site.Params.favicon }}
