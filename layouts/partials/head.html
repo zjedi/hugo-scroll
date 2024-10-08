@@ -29,7 +29,7 @@
 {{ $stylesheetFonts := resources.Get "css/fonts.css" }}
 {{ $stylesheetGeneric := resources.Get "css/generic.css" }}
 
-{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | css.Sass ) }}
+{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | css.scss ) }}
 
 {{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetGeneric $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
