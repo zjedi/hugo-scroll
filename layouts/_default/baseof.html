@@ -13,10 +13,9 @@
     {{ $scriptJquery := resources.Get "js/jquery-3.6.3.min.js" }}
 
     <!-- The main JavaScript files for HugoScroll -->
-    {{ $scriptIcons := resources.Get "js/icons.js" }}
     {{ $scriptIndex := resources.Get "js/index.js" }}
     {{ $scriptPolyfill := resources.Get "js/css-vars-ponyfill.min.js" }}
-    {{ $js := slice $scriptJquery $scriptIcons $scriptIndex $scriptPolyfill | resources.Concat "js/script.js" | resources.Minify | resources.Fingerprint }}
+    {{ $js := slice $scriptJquery $scriptIndex $scriptPolyfill | resources.Concat "js/script.js" | resources.Minify | resources.Fingerprint }}
 
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" ></script>
 

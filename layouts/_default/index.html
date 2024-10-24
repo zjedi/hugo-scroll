@@ -14,7 +14,7 @@
   {{- with $img.Resize ( printf "%dx%d %s" $img.Width $img.Height $image_options ) -}}
   #site-head.withCenteredImage {
     background-image: url('{{- .RelPermalink -}}');
-  }  
+  }
   {{- end -}}
 
   /*

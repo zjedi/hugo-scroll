@@ -17,7 +17,7 @@ Promo image which may be a bit outdated:<br/>
 - SEO friendly
 - Customizable
 - Video cover
-- [Fork Awesome Icons][fork-awesome-icons] out of the box
+- [Font Awesome v6.6.0 Icons][font-awesome-icons] out of the box
 - Header logo
 - Visual guards to guarantee readability
 - External links
@@ -75,10 +75,26 @@ Add a [`custom_head.html`](https://github.com/zjedi/hugo-scroll/blob/master/exam
 
 ### Icons
 
-This theme includes the full set of [Fork Awesome 1.2.0 Icons][fork-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
+This theme includes the full set of [Font Awesome v6.6.0 icons][font-awesome-icons]. Use the `{{< icon >}}` [shortcode][hugo-shortcodes] with the respective `name` to use an icon directly in your `.md` files. For example:
 
-```markdown
-Look at this nice »envelope«-icon: `{{<icon class="fa fa-envelope">}}`. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
+```html
+{{< icon name="envelope" >}}
+```
+
+If you want to use one of Font Awesome's brand icons—the ones that have a trademark warning and the `fa-brands` class—add `brand=true`. For example:
+
+```html
+{{< icon name="github" brand=true >}}
+```
+
+If you want to use these branded icons in your contact list, use the full class names in your `hugo.toml`:
+
+```toml
+[[params.contacts]]
+  label = "GitHub"
+  value = "github.com/zjedi/hugo-scroll"
+  url = "https://github.com/zjedi/hugo-scroll"
+  icon = "fa-brands fa-github"
 ```
 
 ### Header logo
@@ -124,5 +140,5 @@ See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/co
 - [Pexels](https://www.pexels.com), for supplying _free_ stock photos.
 
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
-[fork-awesome-icons]: https://forkaweso.me/Fork-Awesome/icons/
+[font-awesome-icons]: https://fontawesome.com/icons
 [hugo-shortcodes]: https://gohugo.io/content-management/shortcodes/

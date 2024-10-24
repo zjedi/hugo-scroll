@@ -1,1 +1,5 @@
-{{ with .Get "class" }}<i class="{{ . }}"></i>{{ end }}
+{{ if .Get "brand" }}
+  {{ with .Get "name" }}<i class="fa-brands fa-{{ . }}"></i>{{ end }}
+{{ else }}
+  {{ with .Get "name" }}<i class="fa fa-{{ . }}"></i>{{ end }}
+{{ end }}
