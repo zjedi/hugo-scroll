@@ -1,6 +1,5 @@
-build
-resources
+assets/css/fontawesome
+assets/css/normalize.css
+layouts/_default/index.html
 public
-static/fork-awesome
-static/css/normalize.css
-layouts/index.html
+resources
