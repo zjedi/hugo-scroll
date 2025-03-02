@@ -1,9 +1,15 @@
 {{ define "main" }}
 {{ $headless := .GetPage "./homepage" }}
+{{ if hugo.IsMultihost }}
+  {{ $headless := .Site.GetPage "/homepage" }}
+{{ end }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 {{ $content := where (where $sections "Params.external" "==" nil) "Params.detailed_page_homepage_content" "ne" false }}
-{{ $translations := .Page.AllTranslations }}
+{{ $langs := .Page.AllTranslations }}
+{{ if hugo.IsMultihost }}
+  {{ $langs = .Site.Languages }}
+{{ end }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
@@ -60,17 +66,26 @@
             {{- partial "custom_header_video.html" . -}}
         {{ end }}
 
-	{{ $num_lang := len $translations }}
-	{{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
+  {{ $num_lang := len $langs }}
+  {{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
 	<div id="site-languages" class="inner">
-    {{ range $translations }}
-      {{ $lang_title := or .Language.LanguageName (.Lang | strings.ToUpper) }}
-      {{ if eq .Lang $.Lang }}
+    {{ range $langs }}
+      {{ $condition := eq .Lang $.Lang }}
+      {{ $lang_func := .Language.LanguageName }}
+      {{ $href := .RelPermalink }}
+      {{ if hugo.IsMultihost }}
+        {{ $langs = site.Sites }}
+        {{ $condition = eq . $.Site }}
+        {{ $lang_func = .LanguageName }}
+        {{ $href = .Home.Permalink }}
+      {{ end }}
+      {{ $lang_title := or $lang_func (.Lang | strings.ToUpper) }}
+      {{ if $condition }}
         {{ if $.Site.Params.show_current_lang }}
           <span class='btn-lang active'>{{ $lang_title }}</span>
         {{ end }}
       {{ else }}
-        <a class='btn-lang' href='{{ .RelPermalink }}'>{{ $lang_title }}</a>
+        <a class='btn-lang' href='{{ $href }}'>{{ $lang_title }}</a>
       {{ end }}
     {{ end }}
 	</div>
