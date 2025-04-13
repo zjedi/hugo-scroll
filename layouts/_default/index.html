@@ -108,8 +108,13 @@
               {{ else if isset .Params "detailed_page_path" }}
                  <a class='btn site-menu' href='{{ .Params.detailed_page_path | relURL }}'>{{ $button_title }}</a>
               {{ else }}
-                {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
+                 {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
+                 <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>
+	             {{ with .Params.icon }} 
+                     <i class='fas fa-{{ . }} fa-fw'></i>
+                     {{ end }}
+                     {{ $button_title }}
+		 </a>
               {{ end }}
             {{ end }}
 
@@ -131,7 +136,12 @@
         {{ $last_index_val := 0 }}
         {{ range $index_val, $elem_val := $content }}
             {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
-            <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize $fnav_title }}'>{{ $fnav_title | safeHTML }}</a>
+            <a class='fn-item' item_index='{{ (add $index_val 1) }}' href='#{{ anchorize $fnav_title }}'>
+		    {{ with .Params.icon }}
+                    <i class='fas fa-{{ . }} fa-fw'></i>
+                    {{ end }}
+                    {{ $fnav_title | safeHTML }}
+	    </a>
             {{ $last_index_val = $index_val }}
         {{ end }}
         {{ if eq .Params.nav_to_top_weight "last" }}
@@ -145,9 +155,13 @@
         {{ if .Title }}
         {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
         <div class='post-holder{{ if and (ne .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq .Site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
-            <article id='{{ anchorize $fnav_title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $content) }}last{{ end }}'>
-                <header class="post-header">
-                    <h2 class="post-title">{{ .Title | emojify | safeHTML }}</h2>
+            <article id='{{ anchorize $fnav_title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $content) }}last{{ end }}'>                <header class="post-header">
+                    <h2 class="post-title">
+			{{ with .Params.icon }}
+                        <i class='fas fa-{{ . }} fa-fw'></i>
+                        {{ end }}
+                        {{ .Title | emojify | safeHTML }}
+		    </h2>
                 </header>
                 <section class="post-content">
                     {{ .Content }}
