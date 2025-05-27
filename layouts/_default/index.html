@@ -106,7 +106,7 @@
               {{ if isset .Params "external" }}
                  <a class='btn site-menu' href='{{ .Params.external | absURL }}'>{{ $button_title }}&nbsp;<i class="fa fa-external-link"></i></a>
               {{ else if isset .Params "detailed_page_path" }}
-                 <a class='btn site-menu' href='{{ .Params.detailed_page_path | relURL }}'>{{ $button_title }}</a>
+                 <a class='btn site-menu' href='{{ .Params.detailed_page_path | relLangURL }}'>{{ $button_title }}</a>
               {{ else }}
                 {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
                  <a class='btn site-menu' data-title-anchor='{{ anchorize $fnav_title }}' href='#{{ anchorize $fnav_title }}'>{{ $button_title }}</a>
