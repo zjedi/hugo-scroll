@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+icon: comments
 weight: 4
 header_menu: true
 ---
