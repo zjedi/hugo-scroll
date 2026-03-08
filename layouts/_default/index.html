@@ -17,7 +17,7 @@
   {{ $image_options := $.Site.Params.image_options | default "webp q90 lanczos photo" -}}
   <style>
   /* Default cover for larger screens, converted to webp */
-  {{- with $img.Resize ( printf "%dx%d %s" $img.Width $img.Height $image_options ) -}}
+  {{- with $img.Resize ( printf "2000 %s" $image_options ) -}}
   #site-head.withCenteredImage {
     background-image: url('{{- .RelPermalink -}}');
   }
