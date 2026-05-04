@@ -51,10 +51,9 @@
   {{- end }}
   </style>
   {{ end }}
-<header id="site-head" class="withCenteredImage">
-{{ else }}
-<header id="site-head">
 {{ end }}
+
+<header id="site-head" {{ if not .Params.header_use_video }}class="withCenteredImage"{{ end }}>
 
     <div class="vertical">
 
