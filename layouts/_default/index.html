@@ -69,7 +69,7 @@
 	<div id="site-languages" class="inner">
     {{ range $langs }}
       {{ $condition := eq .Lang $.Lang }}
-      {{ $lang_func := .Language.LanguageName }}
+      {{ $lang_func := .Language.Label }}
       {{ $href := .RelPermalink }}
       {{ if hugo.IsMultihost }}
         {{ $langs = site.Sites }}
