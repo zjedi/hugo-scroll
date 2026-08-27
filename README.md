@@ -97,6 +97,17 @@ If you want to use these branded icons in your contact list, use the full class 
   icon = "fa-brands fa-github"
 ```
 
+You may also use the `icon` parameter in your page frontmatter to set an icon before your title in the section heading, as well as in the header button and nav bar. 
+
+```yaml
+---
+title: "Contact us"
+icon: comments
+header_menu: true
+weight: 6
+---
+```
+
 ### Header logo
 
 Configured in `_index.md`, see `exampleSite`: `header_logo: "images/chef-hat.png"`
