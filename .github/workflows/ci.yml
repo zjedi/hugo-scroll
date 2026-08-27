@@ -22,6 +22,9 @@ jobs:
           hugo-version: latest
           extended: true
 
+      - name: Install Dart Sass
+        run: npm install -g sass
+
       - name: Build local ./exampleSite
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://zjedi.github.io/hugo-scroll/
 
