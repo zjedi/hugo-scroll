@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 
 # This is a "one page"-website, so we do not need these kinds of pages...
-disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+disableKinds = ["section", "taxonomy", "term", "rss", "robotsTXT"]
 
 defaultContentLanguage = "en"
 

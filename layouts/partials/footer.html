@@ -1,9 +1,10 @@
-{{ $headless := .Site.GetPage "/homepage" }}
+{{ $headless := site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 
 <footer class="site-footer">
   <div class="inner">
-    {{ if ne .Site.Params.footer.showFooterLinks false }}
+    {{ if ne site.Params.footer.showFooterLinks false }}
     <section class="links">
       <ol>
       {{ range where $sections ".Params.footer_menu" "eq" true }}
@@ -16,19 +17,19 @@
     <hr />
     {{ end }}
 
-    {{ if ne .Site.Params.footer.showContactIcons false }}
+    {{ if ne site.Params.footer.showContactIcons false }}
       <section class="icons">
-        {{ range .Site.Params.contacts }}
+        {{ range site.Params.contacts }}
           <a href="{{ .url | safeURL }}" aria-label='{{ i18n "{{ .label }}" }}'><i class="{{ .icon }}"></i></a>
         {{ end }}
       </section>
     {{ end }}
 
-    {{ with .Site.Params.copyright }}
+    {{ with site.Params.copyright }}
       <section class="copyright">{{ . | safeHTML }}</section>
     {{ end }}
 
-    {{ if ne .Site.Params.hidedesignbyline true }}
+    {{ if ne site.Params.hidedesignbyline true }}
       <section>
         <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
       </section>
