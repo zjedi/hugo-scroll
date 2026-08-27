@@ -23,7 +23,12 @@ jobs:
           extended: true
 
       - name: Install Dart Sass
-        run: npm install -g sass
+        run: |
+          curl -LJO https://github.com/sass/dart-sass/releases/download/1.77.8/dart-sass-1.77.8-linux-x64.tar.gz
+          tar -xf dart-sass-1.77.8-linux-x64.tar.gz
+          sudo cp -r dart-sass/* /usr/local/bin/
+          rm -rf dart-sass*
+          sass --version
 
       - name: Build local ./exampleSite
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://zjedi.github.io/hugo-scroll/
