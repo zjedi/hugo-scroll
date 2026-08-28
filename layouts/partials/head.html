@@ -1,21 +1,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-{{ if and site.Params.combine_page_and_site_title .Title .Site.Title }}
-<title>{{ .Title | plainify }} | {{ .Site.Title | plainify }}</title>
+{{ if and site.Params.combine_page_and_site_title .Title site.Title }}
+<title>{{ .Title | plainify }} | {{ site.Title | plainify }}</title>
 {{ else }}
-{{ with or .Title .Site.Title | plainify }}
+{{ with or .Title site.Title | plainify }}
 <title>{{ . }}</title>
 {{ end }}
 {{ end }}
 
-{{ with resources.Get .Site.Params.favicon }}
+{{ with resources.Get site.Params.favicon }}
   <link rel="shortcut icon" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}" />{{ end }}
 
-{{ with or .Description .Site.Params.description | plainify }}
+{{ with or .Description site.Params.description | plainify }}
   <meta name="description" content="{{ . }}"
 />{{ end }}
-{{ with or (delimit .Keywords ", ") .Site.Params.meta.keywords }}
+{{ with or (delimit .Keywords ", ") site.Params.meta.keywords }}
   <meta name="keywords" content="{{ . }}"
 />{{ end }}
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -31,7 +31,8 @@
 {{ $stylesheetFonts := resources.Get "css/fonts.css" }}
 {{ $stylesheetGeneric := resources.Get "css/generic.css" }}
 
-{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | css.Sass ) }}
+{{ $opts := dict "transpiler" "dartsass" }}
+{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | css.Sass $opts ) }}
 
 {{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFABrands $stylesheetFASolid $stylesheetFonts $stylesheetGeneric $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />

@@ -27,7 +27,8 @@ into single file)
 
 ## 🔑 Installation
 
-You need to install Hugo extended version.
+You need to install **Hugo Extended v0.165.0+** and the **[Dart Sass](https://github.com/sass/dart-sass)** executable in your system `$PATH` (since Hugo deprecated LibSass). 
+
 If you already have a Hugo site on your machine, you can simply add this theme via
 
 ```cli
