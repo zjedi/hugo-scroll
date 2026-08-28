@@ -1,6 +1,6 @@
 {{ $headless := site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
-{{ $sections := cond site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
+{{ $sections := cond hugo.IsServer $sections (where $sections "Draft" "==" false) }}
 
 <footer class="site-footer">
   <div class="inner">
