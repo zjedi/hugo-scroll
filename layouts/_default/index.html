@@ -75,7 +75,7 @@
       {{ if hugo.IsMultihost }}
         {{ $langs = site.Sites }}
         {{ $condition = eq . site }}
-        {{ $lang_func = .LanguageName }}
+        {{ $lang_func = .Language.Label }}
         {{ $href = .Home.Permalink }}
       {{ end }}
       {{ $lang_title := or $lang_func (.Lang | strings.ToUpper) }}
