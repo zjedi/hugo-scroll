@@ -1,19 +1,20 @@
 {{ define "main" }}
 {{ $headless := .GetPage "./homepage" }}
 {{ if hugo.IsMultihost }}
-  {{ $headless := .Site.GetPage "/homepage" }}
+  {{ $headless := site.GetPage "/homepage" }}
 {{ end }}
 {{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond hugo.IsServer $sections (where $sections "Draft" "==" false) }}
 {{ $content := where (where $sections "Params.external" "==" nil) "Params.detailed_page_homepage_content" "ne" false }}
 {{ $langs := .Page.AllTranslations }}
 {{ if hugo.IsMultihost }}
-  {{ $langs = .Site.Languages }}
+  {{ $langs = site.Languages }}
 {{ end }}
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
   {{ with $img := resources.Get .Params.header_image }}
-  {{ $image_options := $.Site.Params.image_options | default "webp q90 lanczos photo" -}}
+  {{ $image_options := site.Params.image_options | default "webp q90 lanczos photo" -}}
   <style>
   /* Default cover for larger screens, converted to webp */
   {{- with $img.Resize ( printf "%dx%d %s" $img.Width $img.Height $image_options ) -}}
@@ -65,7 +66,7 @@
         {{ end }}
 
   {{ $num_lang := len $langs }}
-  {{ if and (gt $num_lang 1) $.Site.Params.language_menu }}
+  {{ if and (gt $num_lang 1) site.Params.language_menu }}
 	<div id="site-languages" class="inner">
     {{ range $langs }}
       {{ $condition := eq .Lang $.Lang }}
@@ -73,13 +74,13 @@
       {{ $href := .RelPermalink }}
       {{ if hugo.IsMultihost }}
         {{ $langs = site.Sites }}
-        {{ $condition = eq . $.Site }}
+        {{ $condition = eq . site }}
         {{ $lang_func = .LanguageName }}
         {{ $href = .Home.Permalink }}
       {{ end }}
       {{ $lang_title := or $lang_func (.Lang | strings.ToUpper) }}
       {{ if $condition }}
-        {{ if $.Site.Params.show_current_lang }}
+        {{ if site.Params.show_current_lang }}
           <span class='btn-lang active'>{{ $lang_title }}</span>
         {{ end }}
       {{ else }}
@@ -92,10 +93,10 @@
         <div id="site-head-content" class="inner">
 	    {{ with resources.Get .Params.header_logo }}<img id="blog-logo" alt="" src="{{ .RelPermalink }}" />{{ end }}
 
-            {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
+            {{ if site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
               {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . | safeHTML }}</h2>{{ end }}
-            {{ if .Site.Params.title_guard }}</div>{{ end }}
+            {{ if site.Params.title_guard }}</div>{{ end }}
 
             {{ range where $sections ".Params.header_menu" "eq" true }}
               {{ $button_title := .Title }}
@@ -142,7 +143,7 @@
     {{ range $index_val, $elem_val := $content }}
         {{ if .Title }}
         {{ $fnav_title := .Title }}{{ with .Params.navigation_menu_title }}{{ $fnav_title = . }}{{ end }}
-        <div class='post-holder{{ if and (ne .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq .Site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
+        <div class='post-holder{{ if and (ne site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} dark{{ else if and (eq site.Params.invertSectionColors true) (modBool $index_val 2) }} dark{{ end }}'>
             <article id='{{ anchorize $fnav_title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $content) }}last{{ end }}'>
                 <header class="post-header">
                     <h2 class="post-title">{{ .Title | emojify | safeHTML }}</h2>
@@ -151,7 +152,7 @@
                     {{ .Content }}
                 </section>
             </article>
-            <div class='post-after{{ if and (ne .Site.Params.invertSectionColors true) (modBool $index_val 2) }} light{{ else if and (eq .Site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} light{{ end }}'></div>
+            <div class='post-after{{ if and (ne site.Params.invertSectionColors true) (modBool $index_val 2) }} light{{ else if and (eq site.Params.invertSectionColors true) (not (modBool $index_val 2)) }} light{{ end }}'></div>
         </div>
         {{ end }}
     {{ end }}

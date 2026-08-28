@@ -14,20 +14,28 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3.0.0
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: latest
           extended: true
+
+      - name: Install Dart Sass
+        run: |
+          curl -fLJO --proto '=https' --tlsv1.2 https://github.com/sass/dart-sass/releases/download/1.77.8/dart-sass-1.77.8-linux-x64.tar.gz
+          tar -xf dart-sass-1.77.8-linux-x64.tar.gz
+          sudo cp -r dart-sass/* /usr/local/bin/
+          rm -rf dart-sass*
+          sass --version
 
       - name: Build local ./exampleSite
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://zjedi.github.io/hugo-scroll/
 
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push'
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

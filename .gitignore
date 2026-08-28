@@ -4,3 +4,4 @@ exampleSite/resources
 node_modules
 *.lock
 hugo-scroll.code-workspace
+bin
