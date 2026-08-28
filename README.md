@@ -134,6 +134,10 @@ Visit us at {{<extlink icon="fa fa-instagram" text="Instagram" href="https://www
 
 See [contributing guideline](https://github.com/zjedi/hugo-scroll/blob/master/contributing.md) for more.
 
+### Code Style / Formatting
+
+This project uses [Prettier](https://prettier.io/) as a baseline for code formatting. NPM is only used to manage the Prettier dependencies, apart from formatting, NPM is not required at all to be available.
+
 ## 👏 Special Thanks
 
 - [Jan Raasch](https://www.janraasch.com), original author of theme
