@@ -25,6 +25,6 @@ Sie werden dafür wahrscheinlich Geld bezahlen müssen.
 
 Ich kann Ihre Tischkultur heben!
 
-![Lassen Sie uns mit einem sauberen Zustand beginnen](/images/woman-pouring-juice-on-glass-3184192.jpg)
+![Lassen Sie uns mit einem sauberen Zustand beginnen](images/woman-pouring-juice-on-glass-3184192.jpg)
 
 Möchten Sie mehr über meine Dienstleistungen erfahren? Siehe [eigene Seite](services) mit weiteren Details.

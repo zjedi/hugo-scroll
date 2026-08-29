@@ -16,7 +16,7 @@ Images from local content location can't be pipeline-processed.
 #### Static
 
 Alternatively, images can be injected from `static/images`:
-![Jane Doe](/images/static-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
+![Jane Doe](images/static-happy-ethnic-woman-sitting-at-table-with-laptop-3769021.jpg)
 Note the leading `/` is required in this case.
 Images from static location can't be pipeline-processed and are always copied when publishing the site, even if not linked from any page.
 

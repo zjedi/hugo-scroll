@@ -18,7 +18,7 @@ Das ist keine einfache Aufgabe. Sie werden wahrscheinlich Geld dafür bezahlen m
 
 <!-- Note how static images need to have leading slash from the dedicated pages -->
 
-![Schönes Bild, das Sie dazu bringt, mich zu bezahlen ;-)](/images/selective-focus-photography-of-pasta-with-tomato-and-basil-1279330.jpg)
+![Schönes Bild, das Sie dazu bringt, mich zu bezahlen ;-)](images/selective-focus-photography-of-pasta-with-tomato-and-basil-1279330.jpg)
 
 Wow. Das war schön, oder? Nun, rufen Sie mich an und lassen Sie uns reden.
 
@@ -28,11 +28,11 @@ Wow. Das war schön, oder? Nun, rufen Sie mich an und lassen Sie uns reden.
 
 Haben Sie das Bild oben gesehen? Ich kann Ihnen zeigen, wie Sie von
 
-![Lassen Sie uns mit einem sauberen Zustand beginnen](/images/board-bunch-cooking-food-349609.jpg)
+![Lassen Sie uns mit einem sauberen Zustand beginnen](images/board-bunch-cooking-food-349609.jpg)
 
 zu
 
-![Lassen Sie uns mit einem sauberen Zustand beginnen](/images/woman-pouring-juice-on-glass-3184192.jpg)
+![Lassen Sie uns mit einem sauberen Zustand beginnen](images/woman-pouring-juice-on-glass-3184192.jpg)
 
 in geschätzten Sekunden kommen.
 
