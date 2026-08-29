@@ -5,12 +5,12 @@ weight: 1
 
 Das ist die deutsche Beispielseite.
 
-`Hugo-Scroll` theme alternates colors of sections that are placed on single page.
-The landing screen is meant to be visually striking.
+Das `Hugo-Scroll`-Theme wechselt die Farben von Abschnitten, die auf einer einzelnen Seite platziert sind.
+Die Startseite soll optisch auffällig sein.
 
-Single-page approach is oriented towards small to medium content length, that won't overwhelm the user.
-You can also delegate lengthier, less important or more sizeable content to [dedicated pages](services).
+Der Single-Page-Ansatz ist auf kleine bis mittlere Inhaltslängen ausgerichtet, die den Benutzer nicht überfordern.
+Sie können auch längere, weniger wichtige oder umfangreichere Inhalte auf [eigene Seiten](services) auslagern.
 
-> The belly rules the mind. --- spanish proverb
+> Der Bauch regiert den Verstand. --- Spanisches Sprichwort
 
-By the way this welcome section won't show in the cover menu.
+Übrigens wird dieser Willkommensabschnitt nicht im Cover-Menü angezeigt.

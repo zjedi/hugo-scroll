@@ -1,6 +1,6 @@
 ---
-title: "The single page referenced to by the Legal button on the cover page"
+title: "Die einzelne Seite, auf die der Button Legal auf der Startseite verweist"
 ---
-This file is a single page and is referenced by the button `Legal` on the cover start page.
+Diese Datei ist eine einzelne Seite und wird durch den Button `Legal` auf der Startseite verlinkt.
 
-It can contain more or additional information than the dedicated section on the homepage.
+Sie kann mehr oder zusätzliche Informationen enthalten als der entsprechende Abschnitt auf der Homepage.
