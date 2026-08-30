@@ -12,7 +12,7 @@ Feature-Hinweis: Dieser Abschnitt zeigt Optionen zur Anpassung des Titels:
 - einen benutzerdefinierten Startseiten-Titel (`header_menu_title` = "Angebot"),
 - einen benutzerdefinierten Navigationsmenü-Titel (`navigation_menu_title` = "Mein Angebot").
 
-Das ist der wichtige Teil, richtig? Sie wollen wissen, was ich für Sie tun kann. Deshalb habe ich dies direkt hier oben in das Kopfmenü der Website gesetzt.
+Das ist der wichtige Teil, richtig? Sie wollen wissen, was ich für Sie tun kann. Deshalb habe ich dies direkt hier oben in das Menü der Website gesetzt.
 
 ---
 
