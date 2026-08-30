@@ -2,41 +2,41 @@
 title: "Mein Angebot"
 ---
 
-Das ist die deutsche Variante von meinem Angebot.
+Das ist die deutsche Variante meines Angebots.
 
-It carries a lot more detail than what I put on the homepage - I swear!
+Sie enthält viel mehr Details als das, was ich auf der Homepage dargestellt habe - ich schwöre!
 
-You want to know what I can do for you?
+Sie möchten wissen, was ich für Sie tun kann?
 
-Well, let me tell ya!
-
----
-
-## Nutrition Coaching
-
-This is not an easy task. You will likely have to pay money for this. You know what - let us look at a nice picture first.
-
-<!-- Note how static images need to have leading slash from the dedicated pages -->
-
-![Nice picture to make you pay me ;-)](images/selective-focus-photography-of-pasta-with-tomato-and-basil-1279330.jpg)
-
-Wow. That was nice, right? Well, call me and let us talk.
+Nun, lassen Sie es mich Ihnen sagen!
 
 ---
 
-## Chef Consulting
+## Ernährungsberatung
 
-Did you see the picture above? I can show you how to go from
+Das ist keine einfache Aufgabe. Sie werden wahrscheinlich Geld dafür bezahlen müssen. Wissen Sie was - schauen wir uns zuerst ein schönes Bild an.
 
-![Let us get started on a clean slate](images/board-bunch-cooking-food-349609.jpg)
+<!-- Note how static images may need to have a leading slash from the dedicated pages -->
 
-to
+![Schönes Bild, das Sie dazu bringt, mich zu bezahlen ;-)](images/selective-focus-photography-of-pasta-with-tomato-and-basil-1279330.jpg)
 
-![Let us get started on a clean slate](images/woman-pouring-juice-on-glass-3184192.jpg)
+Wow. Das war schön, oder? Nun, rufen Sie mich an und lassen Sie uns reden.
 
-in estimated seconds.
+---
 
-Don't believe me? Here are some bullets
+## Kochberatung
 
-* If anyone can teach you to cook, I can
-* And if you already know how to cook, I will make you that much better
+Haben Sie das Bild oben gesehen? Ich kann Ihnen zeigen, wie Sie von
+
+![Lassen Sie uns mit einem sauberen Zustand beginnen](images/board-bunch-cooking-food-349609.jpg)
+
+zu
+
+![Zielzustand](images/woman-pouring-juice-on-glass-3184192.jpg)
+
+in geschätzt nur Sekunden kommen.
+
+Glauben Sie mir nicht? Hier sind einige Punkte:
+
+* Wenn Ihnen jemand das Kochen beibringen kann, dann bin ich das
+* Und wenn Sie schon kochen können, werde ich Sie so viel besser machen
