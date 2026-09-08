@@ -1,9 +1,9 @@
 ---
-title: "Contact"
+title: "Kontakt"
 weight: 4
 header_menu: true
 ---
 
 {{<contact_list>}}
 
-Let us get in touch!
+Lassen Sie uns in Kontakt treten!
