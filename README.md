@@ -108,7 +108,7 @@ Set `header_use_video: true` in `/exampleSite/content/_index.md` and define vide
 
 ### Footer version information
 
-In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/))) set the following general option in your hugo.toml: `enableGitInfo = true`
+In order to see technical version information (extracted from Hugo's [GitInfo](https://gohugo.io/variables/git/)) set the following general option in your hugo.toml: `enableGitInfo = true`
 
 ### External links
 
